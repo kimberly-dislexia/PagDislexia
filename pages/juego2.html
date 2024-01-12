@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de la Palabra Correcta</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .seccion {
+            margin-top: 40px;
+            
+        }
+
+        .opciones {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .opcion {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .opcion:hover {
+            background-color: #f0f0f0;
+        }
+
+        .correcta {
+            background-color: #7FFF7F;
+        }
+
+        .incorrecta {
+            background-color: #FF7F7F;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="background-color: rgb(236, 236, 84); padding: 2%;"> Seleccione la palabra correcta: </h1>
+<p style="text-align: center; margin-top: 0%"> Nota: Si se encuentra en una computadora elija la opción dando click y deslice el cursor del mouse fuera de la celda para revelar si la respuesta es correcta, si se encuentra en un dispositivo movil elija una opción y luego presione una parte en blanco de la pantalla para verificar si la respuesta es correcta o no. </p>
+
+<div class="seccion">
+    <h2>Ejercicio 1</h2>
+    <div class="opciones">
+        <div class="opcion" onclick="verificarSeleccion('incorrecta1')" ontouchstart="verificarSeleccion('incorrecta1')">Laco</div>
+        <div class="opcion" onclick="verificarSeleccion('correcta1')" ontouchstart="verificarSeleccion('correcta1')">Lago</div>
+        <div class="opcion" onclick="verificarSeleccion('incorrecta1')" ontouchstart="verificarSeleccion('incorrecta1')">Laho</div>
+        <div class="opcion" onclick="verificarSeleccion('incorrecta1')" ontouchstart="verificarSeleccion('incorrecta1')">Laqo</div>
+    </div>
+</div>
+
+<div class="seccion">
+    <h2>Ejercicio 2</h2>
+    <div class="opciones">
+        <div class="opcion" onclick="verificarSeleccion('incorrecta2')" ontouchstart="verificarSeleccion('incorrecta2')">Grusto</div>
+        <div class="opcion" onclick="verificarSeleccion('incorrecta2')" ontouchstart="verificarSeleccion('incorrecta2')">Grumbo</div>
+        <div class="opcion" onclick="verificarSeleccion('correcta2')" ontouchstart="verificarSeleccion('correcta2')">Gusto</div>
+        <div class="opcion" onclick="verificarSeleccion('incorrecta2')" ontouchstart="verificarSeleccion('incorrecta2')">Grinto</div>
+    </div>
+</div>
+
+<div class="seccion">
+    <h2>Ejercicio 3</h2>
+    <div class="opciones">
+        <div class="opcion" onclick="verificarSeleccion('correcta3')" ontouchstart="verificarSeleccion('correcta3')">Plano</div>
+        <div class="opcion" onclick="verificarSeleccion('incorrecta3')" ontouchstart="verificarSeleccion('incorrecta3')">Plasto</div>
+        <div class="opcion" onclick="verificarSeleccion('incorrecta3')" ontouchstart="verificarSeleccion('incorrecta3')">Plante</div>
+        <div class="opcion" onclick="verificarSeleccion('incorrecta3')" ontouchstart="verificarSeleccion('incorrecta3')">Plusto</div>
+    </div>
+</div>
+
+<div class="seccion">
+    <h2>Ejercicio 4</h2>
+    <div class="opciones">
+        <div class="opcion" onclick="verificarSeleccion('incorrecta4')" ontouchstart="verificarSeleccion('incorrecta4')">Brado</div>
+        <div class="opcion" onclick="verificarSeleccion('incorrecta4')" ontouchstart="verificarSeleccion('incorrecta4')">Brano</div>
+        <div class="opcion" onclick="verificarSeleccion('incorrecta4')" ontouchstart="verificarSeleccion('incorrecta4')">Cravo</div>
+        <div class="opcion" onclick="verificarSeleccion('correcta4')" ontouchstart="verificarSeleccion('correcta4')">Bravo</div>
+    </div>
+</div>
+
+
+<script>
+    function verificarSeleccion(tipo) {
+        // Reiniciar colores de fondo
+        reiniciarColores();
+
+        // Obtener la opción seleccionada
+        const opcionSeleccionada = event.target;
+
+        // Cambiar el color de fondo según si es correcta o incorrecta
+        if (tipo.includes('incorrecta')) {
+            opcionSeleccionada.classList.add('incorrecta');
+        } else {
+            opcionSeleccionada.classList.add('correcta');
+        }
+    }
+
+    function reiniciarColores() {
+        const opciones = document.querySelectorAll('.opcion');
+
+        opciones.forEach(opcion => {
+            opcion.classList.remove('correcta', 'incorrecta');
+        });
+    }
+</script>
+
+</body>
+</html>

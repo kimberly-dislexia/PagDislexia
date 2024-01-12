@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elige la palabra según la imagen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            margin-bottom: 40px; /* Espacio entre secciones */
+        }
+
+        img {
+            max-width: 50%;
+            width: 200px;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            display: block;
+            border: 2px solid #333; /* Ancho del borde y color, puedes ajustarlos según tus preferencias */
+            border-radius: 5px; /* Opcional: para bordes redondeados */
+        }
+
+        .opciones {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .opcion {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .opcion:hover {
+            background-color: #f0f0f0;
+        }
+
+        .correcta {
+            background-color: #8fda8e; /* Verde para la opción correcta */
+        }
+
+        .incorrecta {
+            background-color: #ff7a7a; /* Rojo para las opciones incorrectas */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="background-color: rgb(84, 226, 236); text-align: center; margin-top: 0%; padding: 2%;"> Elige el nombre correcto de las siguientes imágenes: </h1>
+    <p style="text-align: center; margin-top: 0%"> Nota: Si se encuentra en una computadora elija la opción dando click y deslice el cursor del mouse fuera de la celda para revelar si la respuesta es correcta, si se encuentra en un dispositivo movil elija una opción y luego presione una parte en blanco de la pantalla para verificar si la respuesta es correcta o no. </p>
+<div class="container">
+    <img src="https://kimberly-dislexia.github.io/Dislexia123/images/mando.jpg" alt="Imagen1">
+    <div class="opciones">
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">MAMDO</div>
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">MANDO <p style="display: inline; color: transparent;">(Correcta) </p></div>
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">MARDO</div>
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">MANCO</div>
+    </div>
+</div>
+
+<div class="container">
+    <img src="https://kimberly-dislexia.github.io/Dislexia123/images/museo.jpg" alt="Imagen 2">
+    <div class="opciones">
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">MUSEO <p style="display: inline; color: transparent;">(Correcta) </p></div>
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">MUESO</div>
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">MOSEU</div>
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">MUMSEO</div>
+    </div>
+</div>
+
+<div class="container">
+    <img src="https://kimberly-dislexia.github.io/Dislexia123/images/dificil.jpg" alt="Imagen 3">
+    <div class="opciones">
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">Difilcutad</div>
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">Dificiltad</div>
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">Dificultad <p style="display: inline; color: transparent;">(Correcta) </p></div>
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">Dificltad</div>
+    </div>
+</div>
+
+<div class="container">
+    <img src="https://kimberly-dislexia.github.io/Dislexia123/images/televisor.jpg" alt="Imagen 4">
+    <div class="opciones">
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">Televicion</div>
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">Televisión<p style="display: inline; color: transparent;">(Correcta) </p> </div>
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">Telebision</div>
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">Televsion</div>
+    </div>
+</div>
+
+<div class="container">
+    <img src="https://kimberly-dislexia.github.io/Dislexia123/images/silla.jpg" alt="Imagen 5">
+    <div class="opciones">
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">Sillla </div>
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">Sillaar</div>
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">Siila</div>
+        <div class="opcion" onclick="verificarRespuesta(this)" ontouchstart="verificarRespuesta(this)">Silla<p style="display: inline; color: transparent;">(Correcta) </p></div>
+    </div>
+</div>
+
+
+<!-- Agrega tres secciones más aquí, cada una con su imagen y opciones -->
+
+<script>
+    function verificarRespuesta(opcion) {
+        // Reiniciar estilos de todas las opciones
+        const opciones = document.querySelectorAll('.opcion');
+        opciones.forEach(op => {
+            op.classList.remove('correcta', 'incorrecta');
+        });
+
+        // Verificar si la opción seleccionada es correcta
+        if (opcion.innerText.includes('Correcta')) {
+            opcion.classList.add('correcta');
+        } else {
+            opcion.classList.add('incorrecta');
+        }
+    }
+</script>
+</body>
+</html>

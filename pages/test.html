@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tests para diagnosticar la dislexia</title>
+
+    <style>   
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: white;
+            color: #000000;
+            text-align: right;
+            padding: 0.5em;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Agrega una transición suave al cambio de color de fondo */
+             /* Añade posición fija y fija la barra en la parte superior */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Asegura que la barra esté en la parte superior de otros elementos */
+        }
+
+
+        /* Barra de navegación transparente cuando no está en la parte superior */
+        body.with-navbar {
+            margin-top: 80px;
+        }
+
+
+        /* Añade margen superior al contenido para evitar que se superponga con la barra de navegación */
+        section {
+            background-color: #ffffff;
+            padding-top: 0px; /* Ajusta según el tamaño de tu barra de navegación */
+        }
+
+
+        .navbar a {
+            color: #080808;
+            text-decoration: none;
+            padding: 0.5em;
+        }
+
+        #inicio {
+            background-color: #008080;
+            /* Agrega bordes */
+            text-shadow: -1px -1px 0 #000,  
+                  1px -1px 0 #000,
+                 -1px  1px 0 #000,
+                  1px  1px 0 #000;
+                  /* Otras propiedades del texto*/
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            font-style: oblique;
+            padding: 0%;
+
+                /* Propiedades para la imagen de fondo */
+            background-image: url('https://images.unsplash.com/photo-1581544291234-31340be4b1b8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding-top: 2%;
+        }
+
+        #inicio h1{
+            padding-top: 1%;
+        }
+
+        #concepto{
+            font-family: 'Arial', sans-serif;
+            font-size: small;
+            background-color: #ffffff;
+        }
+
+        #concepto img{
+            width: 30px;
+            height: 30px;
+        }
+
+        #concepto h2{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: justify;
+            font-weight: bold;
+        }
+
+        #concepto p{
+            text-align: justify;
+            font-size: large;
+        }
+
+        
+        .contenedor {
+            display: flex;
+            justify-content: left;
+            padding: 0;
+            margin: 0%;     
+        }
+
+        .elemento1 {
+             /* Puedes ajustar la altura según tus necesidades */
+            background-color: #b5c9c9ab; /* Puedes ajustar el color de fondo según tus necesidades */
+            margin: 2px; /* Añade márgenes según tus necesidades */
+            padding: 1%;
+        }
+        
+        .elemento1 img{
+            /* margin-left: 10%; */
+            margin-left: auto;
+            margin-right: auto;
+            width: 20px;
+            height: 20px;
+        }
+
+        .elemento2 {
+            margin: 2px; /* Añade márgenes según tus necesidades */
+            padding: 0%;
+            
+        }
+
+        .elemento2 ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .elemento2 a {
+            list-style-type: none;
+            padding: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .elemento2 img{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            bottom: 0;
+            width: auto;
+        }
+        #footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #footer li {
+            display: inline;
+            margin-right: 10px;
+        }
+        #footer li a{
+            text-align: right;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <div class="navbar" id="navbar">
+        <a href="https://kimberly-dislexia.github.io/Dislexia123/">Inicio</a> 
+        <a href="https://kimberly-dislexia.github.io/Dislexia123/pages/recursos">Recursos</a> 
+        <a href="https://kimberly-dislexia.github.io/Dislexia123/pages/juegos">Juegos Educativos</a>
+        <a href="https://kimberly-dislexia.github.io/Dislexia123/pages/test">Tests</a>
+    </div>
+
+
+    <section id="inicio" style="width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: -100;">
+       <h1>¿Cómo diagnosticar la Dislexia?</h1>
+    </section>
+
+    <div>
+        <h2> Test de diagnóstico de dislexia </h2>
+    </div>
+
+    <div>
+        <p style="text-align: justify; font-size: large">
+            La evaluación y un diagnóstico correcto de la dislexia desempeñan un papel crucial en el proceso educativo y el bienestar emocional de aquellos que la experimentan. La importancia de realizar una evaluación exhaustiva radica en la capacidad de comprender las necesidades específicas de cada individuo y en la formulación de estrategias personalizadas para abordar sus desafíos (Game et al., 2022).
+        </p>
+    </div>
+
+    <section id="concepto">
+       
+            <div class="elemento1">
+                <p>
+                  El siguiente test fue aplicado en la Unidad Educativa Ibarra, dirigida a los adolescentes de decimo grado con el fin de determinar qué tipo de refuerzo necesita el estudiante para poder realizar las actividades correspondientes a su año lectivo. Guiándonos con el test de la Docente Orientadora con Maestría en Psicología Educacional y redactora freelance, Karen García, comprometida con la educación de niños, niñas y adolescentes desde hace más de 10 años. En cuyo test utilizó estos ejercicios presentados en el siguiente archivo descargable para identificar cuál es el problema de los estudiantes y poder enfocarse en esa necesidad.
+                </p>
+
+                <img src="https://kimberly-dislexia.github.io/Dislexia123/pages/wordx.jfif" alt="test utn" style="display: block;">
+                <a href="https://kimberly-dislexia.github.io/Dislexia123/pages/test1.docx" download="test_Ibarra.doc"> <p style="text-align: center;font-size: medium;"> Descargar Test </p></a>
+            </div>   
+            
+            <div class="elemento2">
+                <p>
+                    El diagnóstico de la dislexia generalmente involucra una evaluación integral realizada por profesionales de la salud, educación y neuropsicología. Algunos de los tests y herramientas más comúnmente utilizados en el proceso de diagnóstico de la dislexia se presentan a continuación: 
+                </p>
+                
+
+                <h2>  1. Evaluación de la Conciencia Fonológica: </h2>
+                <p>
+                    El Test de Evaluación de la Conciencia Fonológica (TECF) valora, fundamentalmente, el grado de desarrollo de las habilidades metalingüísticas en el inicio del aprendizaje lectoescritor, a partir de tareas de identificación, adición y omisión de sílabas y fonemas. El objetivo es evaluar la capacidad del alumnado para tomar conciencia y manipular oralmente la estructura silábica y fonémica de las palabras.
+                    El TECF puede ser administrado al alumnado de Educación Infantil y de cualquier otro nivel con dificultades en la adquisición inicial de la lectura y escritura.
+                    En cuanto a su estructura, y considerando que la conciencia fonológica no es una entidad homogénea, se utilizan distintas actividades en la evaluación, así como diferentes materiales. Se evalúan dos niveles de conciencia fonológica, el nivel silábico y fonémico y se proponen tres tareas distintas: identificación, adición y omisión. Además, se ha tenido en cuenta la posición que ocupa la sílaba o el fonema con el que se opera.
+                </p>
+                <img src="https://kimberly-dislexia.github.io/Dislexia123/images/TECF_img.jfif" alt="TECF_img" style="display: block; width: auto; height: auto;"> <p style="font-size: small; text-align: center;">Imagen tomada de: Red Social Educativa (https://redsocial.rededuca.net/evaluacion-del-lenguaje-oral-en-educacion-infantil) </p>
+
+
+                <p>
+                    En el siguiente enlace puede descargar un test incluido en el programa  “Phonemics Awareness in Young Children” de Marylin J. ADAMS adaptado a la lengua española, para utilizarlo como herramienta para la detección de dislexia en estudiantes.
+                </p>
+
+                <img src="https://kimberly-dislexia.github.io/Dislexia123/pages/wordx.jfif"  alt="TECF" style="display: block">
+                <a href="https://kimberly-dislexia.github.io/Dislexia123/docs/TECF.docx" download="nombre_personalizado.doc"><p style="text-align: center;font-size: medium;"> Evaluación de la Conciencia Fonológica </p></a>
+
+                
+
+
+
+
+
+                <h2>  2. Pruebas de decodificación y comprensión lectora:</h2>
+                <p>
+                    Durante las primeras etapas del desarrollo lector, los niños se centran principalmente en adquirir la decodificación. Decodificar se refiere a la habilidad para transformar las palabras escritas en expresiones orales. Esta se sustenta en dos habilidades relacionadas con el lenguaje: la conciencia fonológica y los procesos de reconocimiento de palabras. Así, una vez que los escolares han alcanzado la decodificación, se focalizan en desarrollar la comprensión lectora. 
+                </p>
+
+                <img src="https://kimberly-dislexia.github.io/Dislexia123/images/deco_img.jfif" alt="deco_img" style="max-width: 50%; width: 250px ;height: auto;display: block;"> <p style="font-size: small; text-align: center;">Imagen tomada de: Sara Rivera Psicología (https://psicologiaenaranjuez.com/que-es-la-dislexia/) </p>
+                <p>    
+                    En esta etapa, que generalmente ocurre entre tercer y cuarto año básico, la comprensión escrita depende fundamentalmente de las habilidades de comprensión oral.
+                    Estas pruebas intentan evaluar la comprensión lectora con una perspectiva amplia, a partir de diferentes tipos de textos, y con temas referidos a las áreas de Primaria, centrándose en las dimensiones esenciales de la comprensión lectora, como son:
+                    
+                    <ul style="text-align: justify; font-size: large">
+                        <li>Comprensión Literal, en la que se pide al niño que reconozca informaciones que están explícitamente detalladas en el texto.</li>
+                        <li>Comprensión Inferencial, por la que el niño debe deducir, interpretar, hipotetizar, predecir, etc.                        </li>
+                        <li>Comprensión Reorganizativa, a través de las tareas de clasificación, esquematización, resumen y síntesis.                        </li>
+                        <li>Comprensión Crítica, de evaluación o profunda, en la que el niño hace un juicio evaluativo de acuerdo con sus experiencias, conocimientos y valores. </li>
+                    </ul>                 
+                </p>
+                <p>
+                    En los siguientes enlaces encontrará un artículo descargable sobre este tipos de test: 
+                </p>
+                <img style="width:50px; height:30px; display: block;" src="https://kimberly-dislexia.github.io/Dislexia123/images/pdf.png" alt="deco-comprension">
+                 <a href="https://kimberly-dislexia.github.io/Dislexia123/docs/decodificacion_y_comprension_lectora.pdf" download="nombre_personalizado.doc"><p style="text-align: center;font-size: medium;"> Pruebas de decodificación y comprensión lectora </p></a>
+               
+                <p>
+                    El siguiente enlace lo redigirá a una página interactiva para realizar un pequeño test de decodificación y comprensión lectora:
+                    <a href="https://www.juntadeandalucia.es/averroes/centros-tic/41701419/helvia/aula/archivos/repositorio/0/18/html/Lenguatic/Italica/formatos_variados/Comprensio_lectora/test_comprension1.htm"  target="_blank">CLICKEE AQUÍ</a>
+                </p>
+                
+
+
+
+
+                <h2>  3.Test de Discriminación Visual y Auditiva de Palabras: </h2>
+                <p>
+                    La Evaluación de la Discriminación Visual y Auditiva desempeña un papel esencial en el proceso de evaluación integral de habilidades cognitivas y lingüísticas. Este tipo de evaluación se centra en la capacidad del individuo para diferenciar y procesar información tanto visual como auditiva. En el ámbito visual, se exploran las destrezas de discriminación de formas, patrones y detalles visuales, mientras que en el ámbito auditivo, se evalúa la capacidad para reconocer y distinguir entre diferentes sonidos y tonos. La información recopilada a través de esta evaluación proporciona una visión integral de las habilidades perceptivas del individuo, siendo particularmente relevante en el contexto de trastornos del aprendizaje como la dislexia. La identificación temprana de posibles dificultades en la discriminación visual y auditiva contribuye a la formulación de estrategias educativas personalizadas que apoyan el desarrollo cognitivo y lingüístico del evaluado.
+                </p>
+                <img src="https://kimberly-dislexia.github.io/Dislexia123/images/audiovisual.jpg" alt="TECF_img" style="max-width: 50%; width: 300px ;height: auto; display: block;"> <p style="font-size: small; text-align: center;">Imagen tomada de: FCV (https://www.fcv.org/co/blog/bienestar-fisico/por-que-es-importante-cuidar-nuestra-salud-visual-y-auditiva) </p>
+                <p>
+                    En los siguientes enlaces puede encontrar ejercicios e información relacionados al test en mención de diferentes fuentes: 
+                </p>
+                <ul style="text-align: justify; font-size: medium">
+                    <li><a href="https://precavidos.com/preguntas/categoria/Discriminaci%C3%B3n%20visual/" target="_blank">Preguntas y Ejercicios de Atención y Concentración - Discriminación visual</a></li>
+                    <li><a href="https://es.educaplay.com/recursos-educativos/4706333-discriminacion_visual_p.html" target="_blank">Discriminación visual - Educaplay</a></li>
+                    <li><a href="https://wordwall.net/es-cl/community/discriminaci%C3%B3n-visual" target="_blank">Discriminación visual - Wordwall</a></li>
+                    <li><a href="https://www3.gobiernodecanarias.org/medusa/edublog/ceipsanisidro/wp-content/uploads/sites/213/2020/05/audicion-y-lenguaje-actividades-infantil-discriminacion-auditiva-y-comprension.pdf" target="_blank">Actividades de discriminación auditiva y comprensión </a></li>
+                    <li><a href="https://www.neuronup.com/actividades-de-neurorrehabilitacion/actividades-para-funciones-cognitivas/actividades-de-lenguaje/nuevo-ejercicio-de-discriminacion-auditiva-para-ninos/" target="_blank">Ejercicio de discriminación auditiva para niños - NeuronUp</a></li>
+                </ul>
+                
+
+
+
+
+                <h2>  4. Pruebas de Habilidades Ortográficas y Gramaticales: </h2>
+                <p>
+                    La evaluación de habilidades ortográficas y gramaticales es fundamental en el diagnóstico y apoyo a estudiantes con dislexia. Aquí se menciona algunas pruebas y herramientas comunes utilizadas para evaluar estas habilidades. Tenga en cuenta que algunos de estos recursos pueden no estar disponibles de forma gratuita o podrían requerir permisos específicos para acceder a ellos.
+                </p>
+
+                <img src="https://kimberly-dislexia.github.io/Dislexia123/images/ortografia.jpg" alt="ortografia_img" style="max-width: 50%; width: 300px ;height: auto; display: block;"> <p style="font-size: small; text-align: center;">Imagen tomada de: Psicología y Mente (https://psicologiaymente.com/desarrollo/necesidades-ninos-altas-capacidades) </p>
+
+
+                <p>
+                    Entre las pruebas más utilizadas se encuentran: 
+                </p>
+                <ol style="text-align: justify; font-size: large">
+                    <li>Evaluación de Ortografía de Wechsler (WIAT-III): La WIAT-III incluye una sección que evalúa habilidades ortográficas, analizando la capacidad del estudiante para escribir correctamente palabras seleccionadas. Disponible en: WIAT-III en la editorial Pearson</li>
+                    <li>Evaluación de Gramática de Peabody (PLS-5): La PLS-5 evalúa diversas habilidades lingüísticas, incluyendo la gramática. Puede proporcionar información valiosa sobre el rendimiento gramatical del estudiante. Disponible en: PLS-5 en la editorial WPS</li>
+                    <li>Batería de Evaluación de la Escritura y Ortografía (SpellingCity): SpellingCity es una plataforma en línea que ofrece juegos y actividades interactivas para mejorar las habilidades ortográficas. No es una prueba de diagnóstico, pero puede ser útil para la práctica. Disponible en: SpellingCity.com</li>
+                    <li>Evaluación de Ortografía del Test de Procesamiento Auditivo para Niños (SCAN-3:C): Esta prueba evalúa habilidades específicas de procesamiento auditivo, incluyendo la ortografía auditiva. Disponible en: SCAN-3:C en la editorial Pearson</li>
+                </ol> 
+
+
+
+                <h2>  5. Evaluación Neuropsicológica: </h2>
+                <p>
+                    La Evaluación Neuropsicológica para estudiantes con dislexia constituye un proceso exhaustivo que examina la relación entre el funcionamiento cerebral y las habilidades cognitivas y conductuales del individuo. Este enfoque de evaluación implica la utilización de pruebas específicas diseñadas para medir aspectos como la memoria, la atención, las funciones ejecutivas y otros procesos neuropsicológicos clave. En el contexto de la dislexia, la evaluación neuropsicológica busca identificar patrones específicos de funcionamiento cerebral que pueden influir en las habilidades de lectura y escritura. Además, proporciona información valiosa sobre las fortalezas y debilidades individuales, permitiendo la formulación de estrategias educativas personalizadas. Los resultados de la evaluación neuropsicológica pueden contribuir no solo al diagnóstico preciso de la dislexia, sino también a la implementación de intervenciones educativas efectivas que aborden las necesidades específicas del estudiante en su viaje académico y personal. Este enfoque integral es esencial para comprender la complejidad de la dislexia y facilitar un apoyo educativo centrado en el individuo.
+                </p>
+                    <img src="https://kimberly-dislexia.github.io/Dislexia123/images/neuro.jpeg" alt="neuro_img" style="max-width: 50%; width: 300px ;height: auto; display: block;"> <p style="font-size: small; text-align: center;">Imagen tomada de: Avanza Neuropsicología (https://www.avanzaneuropsicologia.com/evaluacion-neuropsicologica/) </p>
+                <p>
+                    En el siguiente enlace encontrará un artículo con más información sobre este tipos de test: 
+                </p>
+                <img style="width:50px; height:30px; display: block;" src="https://kimberly-dislexia.github.io/Dislexia123/images/pdf.png" alt="deco-comprension">
+                <a href="https://kimberly-dislexia.github.io/Dislexia123/docs/neuro.pdf" download="nombre_personalizado.doc"><p style="text-align: center;font-size: medium;"> Evaluación Neuropsicológica </p></a>
+
+                
+                
+
+
+
+                <h2>  Batería III Woodcock-Muñoz </h2>
+                <p>
+                    Como parte final de la información proporcionada sobre los tests y herramientas tenemos uno de los documentos más útiles para la detección de la dislexia y los problemas relacionados al aprendizaje, la denominada "Batería IV" de Woodcock-Muñoz.
+                    Esta es la versión desarrollada de modo paralelo en idioma español, del Woodcock-Johnson IV (la primera versión data de 1977). Se trata de una técnica de amplio uso internacional tanto en la evaluación educacional, clínica como en investigación. Para su traducción y adaptación se trabajó con 1.413 personas, residentes en Estados Unidos y en países de habla hispana, cuyo primer idioma era el español.
+                </p>
+                <img src="https://kimberly-dislexia.github.io/Dislexia123/images/bateriaiv.jpg" alt="deco_img" style="max-width: 50%; width: 300px ;height: auto; display: block;"> <p style="font-size: small; text-align: center;">Imagen tomada de: Slideshare (https://www.slideshare.net/KeillyDurango/bateria-iv-woodcookmuozpdf) </p>
+                <p>
+                    La Batería Woodcock-Muñoz es una herramienta ampliamente utilizada en la evaluación neuropsicológica y educativa. Esta batería se ha desarrollado para evaluar el rendimiento cognitivo de individuos de todas las edades, desde la infancia hasta la edad adulta. La WJ es una batería muy completa que incluye pruebas en áreas como la inteligencia, la memoria, el lenguaje, la percepción, el aprendizaje y el razonamiento.
+
+                    Una de las mayores ventajas de la WJ es su capacidad para brindar una visión completa y detallada de las fortalezas y debilidades cognitivas de un individuo. Esta información es muy valiosa para los profesionales que trabajan en el ámbito educativo y terapéutico, ya que les permite desarrollar un plan de acción personalizado para cada individuo. La WJ también es muy útil para los padres y tutores, ya que les brinda información sobre cómo su hijo o estudiante está desempeñándose en la escuela y cómo pueden ayudarlo a alcanzar su máximo potencial.
+
+                    Además, la WJ es una herramienta muy eficiente y confiable. Las pruebas incluidas en la batería han sido rigurosamente validadas y estandarizadas, lo que significa que los resultados son precisos y comparables entre individuos. Esto es muy importante para la toma de decisiones informadas, ya que permite comparar el rendimiento cognitivo de un individuo con el de otros de su misma edad y género.
+
+                    Otra ventaja de la WJ es su capacidad para evaluar el rendimiento cognitivo en una amplia gama de áreas. La batería incluye pruebas específicas para evaluar habilidades cognitivas en áreas como la memoria a corto plazo, la capacidad de resolución de problemas y la capacidad de comprensión del lenguaje. Esto significa que la WJ III es una herramienta muy valiosa para los profesionales que trabajan con individuos que tienen dificultades cognitivas específicas, como el trastorno por déficit de atención e hiperactividad (TDAH) o el trastorno por déficit de aprendizaje (TDA).
+                </p>
+
+                <p>
+                    Además, la WJ IV incluye la capacidad de realizar pruebas en línea, lo que la hace más accesible y eficiente que la WJ III. También ofrece un análisis más profundo de los resultados, con informes más detallados y personalizados para cada individuo.
+                    En el siguiente recurso encontrará una guía con información sobre el contenido de esta herramienta:
+
+                </p>
+
+                <p>
+                    <img style="width:50px; height:30px; display: block;" src="https://kimberly-dislexia.github.io/Dislexia123/images/pdf.png" alt="bateriawoodcock">
+                <div>
+                
+                    <a href="https://kimberly-dislexia.github.io/Dislexia123/docs/bateriawoodcock.pdf"  download="nombre_personalizado.pdf" ><p style="text-align: center;font-size: medium;"> Guía Batería IV </p></a>
+
+                </div>
+                </p>
+
+                <p>
+                   El siguiente video es una guía en inglés con subtitulos en español que brinda información a los examinadores para la aplicación de dicha herramienta en los estudiantes:
+                   
+                    <img style="width:20px; height:15px;" src="https://kimberly-dislexia.github.io/Dislexia123/images/youtube.png" alt="video sobre batería IV">
+                    <a href="https://www.youtube.com/watch?v=ezx-vl_OUz0" target="_blank">Video Batería IV</a>
+                   
+                </p>
+
+            </div>
+
+     </section>
+
+     <section id="footer">
+        <p>&copy; 2023 Página para Estudiantes con Dislexia diseñada por Kimberly Alba.</p>
+
+       
+
+     </section>
+
+     <script>
+        // Añade la clase al hacer scroll
+        window.onscroll = function() { scrollFunction() };
+    
+        function scrollFunction() {
+            const navbar = document.getElementById("navbar");
+    
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                navbar.style.backgroundColor = "#ffffff70"; // Cambia el color al hacer scroll hacia abajo
+                document.body.classList.add("with-navbar");
+            } else {
+                navbar.style.backgroundColor = "white"; // Restaura el color inicial
+                document.body.classList.remove("with-navbar");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana Interactiva</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .seccion {
+            margin: 50px;
+        }
+
+        .letra {
+            display: inline-block;
+            font-size: 24px;
+            cursor: pointer;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+        }
+
+        #reiniciar {
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="seccion">
+    <h2>Palabra 1</h2>
+    <div id="contenedor1">
+        <div class="letra" onclick="seleccionarLetra('I', 1)" id="I1">I</div>
+        <div class="letra" onclick="seleccionarLetra('V', 1)" id="V1">V</div>
+        <div class="letra" onclick="seleccionarLetra('L', 1)" id="L1">L</div>
+        <div class="letra" onclick="seleccionarLetra('O', 1)" id="O1">O</div>
+        <div class="letra" onclick="seleccionarLetra('A', 1)" id="A1">A</div>
+        <div class="letra" onclick="seleccionarLetra('E', 1)" id="E1">E</div>
+        <div class="letra" onclick="seleccionarLetra('T', 1)" id="T1">T</div>
+    </div>
+
+    <div id="resultado1">
+        <p>Palabra Formada: <span id="palabraFormada1"></span></p>
+        <p id="mensaje1"></p>
+    </div>
+
+    <button id="reiniciar1" onclick="reiniciarJuego(1)">Reiniciar Palabra</button>
+</div>
+
+<div class="seccion">
+    <h2>Palabra 2</h2>
+    <div id="contenedor2">
+        <div class="letra" onclick="seleccionarLetra('E', 2)" id="E2">E</div>
+        <div class="letra" onclick="seleccionarLetra('C', 2)" id="C2">C</div>
+        <div class="letra" onclick="seleccionarLetra('F', 2)" id="F2">F</div>
+        <div class="letra" onclick="seleccionarLetra('A', 2)" id="A2">A</div> 
+    </div>
+
+    <div id="resultado2">
+        <p>Palabra Formada: <span id="palabraFormada2"></span></p>
+        <p id="mensaje2"></p>
+    </div>
+
+    <button id="reiniciar2" onclick="reiniciarJuego(2)">Reiniciar Juego</button>
+</div>
+
+<script>
+    let palabraPropuesta1 = "VIOLETA";
+    let letrasDisponibles1 = ['V', 'I', 'O', 'L', 'E', 'T', 'A'];
+    let letrasSeleccionadas1 = [];
+    let palabraFormada1 = "";
+
+    let palabraPropuesta2 = "CAFE";
+    let letrasDisponibles2 = ['C', 'A', 'F', 'E'];
+    let letrasSeleccionadas2 = [];
+    let palabraFormada2 = "";
+
+    function seleccionarLetra(letra, seccion) {
+        let letrasDisponibles, letrasSeleccionadas, palabraFormada, palabraPropuesta, mensajeId, contenedorId;
+
+        if (seccion === 1) {
+            letrasDisponibles = letrasDisponibles1;
+            letrasSeleccionadas = letrasSeleccionadas1;
+            palabraFormada = palabraFormada1;
+            palabraPropuesta = palabraPropuesta1;
+            mensajeId = "mensaje1";
+            contenedorId = "contenedor1";
+        } else {
+            letrasDisponibles = letrasDisponibles2;
+            letrasSeleccionadas = letrasSeleccionadas2;
+            palabraFormada = palabraFormada2;
+            palabraPropuesta = palabraPropuesta2;
+            mensajeId = "mensaje2";
+            contenedorId = "contenedor2";
+        }
+
+        if (letrasDisponibles.includes(letra)) {
+            letrasSeleccionadas.push(letra);
+            actualizarPalabra(seccion);
+            document.getElementById(letra + seccion).style.display = "none";
+            letrasDisponibles = letrasDisponibles.filter(item => item !== letra);
+
+            if (letrasDisponibles.length === 0) {
+                if (palabraFormada === palabraPropuesta) {
+                    document.getElementById(mensajeId).innerText = "¡Bien hecho!";
+                } else {
+                    document.getElementById(mensajeId).innerText = "Inténtalo una vez más";
+                }
+            }
+        } else {
+            document.getElementById(mensajeId).innerText = "Inténtalo una vez más";
+        }
+    }
+
+    function reiniciarJuego(seccion) {
+        let letrasDisponibles, letrasSeleccionadas, palabraFormada, mensajeId, contenedorId;
+
+        if (seccion === 1) {
+            letrasDisponibles = ['V', 'I', 'O', 'L', 'E', 'T', 'A'];
+            letrasSeleccionadas = [];
+            palabraFormada = "";
+            mensajeId = "mensaje1";
+            contenedorId = "contenedor1";
+        } else {
+            letrasDisponibles = ['C', 'A', 'F', 'E'];
+            letrasSeleccionadas = [];
+            palabraFormada = "";
+            mensajeId = "mensaje2";
+            contenedorId = "contenedor2";
+        }
+
+        actualizarPalabra(seccion);
+        document.getElementById(mensajeId).innerText = "";
+
+        // Mostrar nuevamente las letras ocultas
+        letrasDisponibles.forEach(letra => {
+            document.getElementById(letra + seccion).style.display = "inline-block";
+        });
+    }
+
+    function actualizarPalabra(seccion) {
+        let letrasSeleccionadas, palabraFormadaId;
+
+        if (seccion === 1) {
+            letrasSeleccionadas = letrasSeleccionadas1;
+            palabraFormadaId = "palabraFormada1";
+        } else {
+            letrasSeleccionadas = letrasSeleccionadas2;
+            palabraFormadaId = "palabraFormada2";
+        }
+
+        palabraFormada = letrasSeleccionadas.join('');
+        document.getElementById(palabraFormadaId).innerText = palabraFormada;
+    }
+</script>
+
+</body>
+</html> -->
+
+
+
+<!-- Barra de navegacion cambia de color -->
+
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Navegación con Cambio de Color</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Estilo inicial de la barra de navegación */
+        .navbar {
+            background-color: transparent;
+            padding: 15px;
+            transition: background-color 0.3s ease;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Añade un margen al cuerpo para evitar que se solapen los contenidos */
+        body.with-navbar {
+            margin-top: 80px;
+        }
+
+        /* Contenido de la página */
+        .content {
+            padding: 20px;
+            height: 1200px; /* Para simular contenido y permitir el scroll */
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar" id="navbar">
+    <h2>Barra de Navegación</h2>
+</div>
+
+<div class="content">
+     <p> Contenido de la pagina </p>
+</div>
+
+<script>
+    // Añade la clase al hacer scroll
+    window.onscroll = function() { scrollFunction() };
+
+    function scrollFunction() {
+        const navbar = document.getElementById("navbar");
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            navbar.style.backgroundColor = "#333"; // Cambia el color al hacer scroll hacia abajo
+            document.body.classList.add("with-navbar");
+        } else {
+            navbar.style.backgroundColor = "transparent"; // Restaura el color inicial
+            document.body.classList.remove("with-navbar");
+        }
+    }
+</script>
+
+</body>
+</html> -->
+
+
+<!-- codigo para el juego 3 con una sola imagen  -->
+
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana Interactiva con Imagen y Opciones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .opciones {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .opcion {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .opcion:hover {
+            background-color: #f0f0f0;
+        }
+
+        .correcta {
+            background-color: #8fda8e; /* Verde para la opción correcta */
+        }
+
+        .incorrecta {
+            background-color: #ff7a7a; /* Rojo para las opciones incorrectas */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="https://kimberly-dislexia.github.io/Dislexia123/images/elegirpalabra.jpeg" alt="Imagen de ejemplo">
+    <div class="opciones">
+        <div class="opcion" onclick="verificarRespuesta(this)">Opción A</div>
+        <div class="opcion" onclick="verificarRespuesta(this)">Opción B (Correcta)</div>
+        <div class="opcion" onclick="verificarRespuesta(this)">Opción C</div>
+        <div class="opcion" onclick="verificarRespuesta(this)">Opción D</div>
+    </div>
+</div>
+
+<script>
+    function verificarRespuesta(opcion) {
+        // Reiniciar estilos de todas las opciones
+        const opciones = document.querySelectorAll('.opcion');
+        opciones.forEach(op => {
+            op.classList.remove('correcta', 'incorrecta');
+        });
+
+        // Verificar si la opción seleccionada es correcta
+        if (opcion.innerText.includes('Correcta')) {
+            opcion.classList.add('correcta');
+        } else {
+            opcion.classList.add('incorrecta');
+        }
+    }
+</script>
+
+</body>
+</html> -->
+
+
+
+<!-- codigo para el juego 3 con varias imagenes  -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventanas Interactivas con Imágenes y Opciones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            margin-bottom: 40px; /* Espacio entre secciones */
+        }
+
+        img {
+            max-width: 50%;
+            width: 200px;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            display: block;
+            border: 2px solid #333; /* Ancho del borde y color, puedes ajustarlos según tus preferencias */
+            border-radius: 5px; /* Opcional: para bordes redondeados */
+        }
+
+        .opciones {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .opcion {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .opcion:hover {
+            background-color: #f0f0f0;
+        }
+
+        .correcta {
+            background-color: #8fda8e; /* Verde para la opción correcta */
+        }
+
+        .incorrecta {
+            background-color: #ff7a7a; /* Rojo para las opciones incorrectas */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="background-color: rgb(84, 226, 236); text-align: center; margin-top: 0%; padding: 2%;"> Elige el nombre correcto de las siguientes imágenes: </h1>
+
+<div class="container">
+    <img src="https://kimberly-dislexia.github.io/Dislexia123/images/mando.jpg" alt="Imagen1">
+    <div class="opciones">
+        <div class="opcion" onclick="verificarRespuesta(this)">MAMDO</div>
+        <div class="opcion" onclick="verificarRespuesta(this)">MANDO <p style="display: inline; color: transparent;">(Correcta) </p></div>
+        <div class="opcion" onclick="verificarRespuesta(this)">MARDO</div>
+        <div class="opcion" onclick="verificarRespuesta(this)">MANCO</div>
+    </div>
+</div>
+
+<div class="container">
+    <img src="https://kimberly-dislexia.github.io/Dislexia123/images/museo.jpg" alt="Imagen 2">
+    <div class="opciones">
+        <div class="opcion" onclick="verificarRespuesta(this)">MUSEO <p style="display: inline; color: transparent;">(Correcta) </p></div>
+        <div class="opcion" onclick="verificarRespuesta(this)">MUESO</div>
+        <div class="opcion" onclick="verificarRespuesta(this)">MOSEU</div>
+        <div class="opcion" onclick="verificarRespuesta(this)">MUMSEO</div>
+    </div>
+</div>
+
+<div class="container">
+    <img src="https://kimberly-dislexia.github.io/Dislexia123/images/dificil.jpg" alt="Imagen 3">
+    <div class="opciones">
+        <div class="opcion" onclick="verificarRespuesta(this)">Difilcutad</div>
+        <div class="opcion" onclick="verificarRespuesta(this)">Dificiltad</div>
+        <div class="opcion" onclick="verificarRespuesta(this)">Dificultad <p style="display: inline; color: transparent;">(Correcta) </p></div>
+        <div class="opcion" onclick="verificarRespuesta(this)">Dificltad</div>
+    </div>
+</div>
+
+<div class="container">
+    <img src="https://kimberly-dislexia.github.io/Dislexia123/images/televisor.jpg" alt="Imagen 4">
+    <div class="opciones">
+        <div class="opcion" onclick="verificarRespuesta(this)">Televicion</div>
+        <div class="opcion" onclick="verificarRespuesta(this)">Televisión<p style="display: inline; color: transparent;">(Correcta) </p> </div>
+        <div class="opcion" onclick="verificarRespuesta(this)">Telebision</div>
+        <div class="opcion" onclick="verificarRespuesta(this)">Televsion</div>
+    </div>
+</div>
+
+<div class="container">
+    <img src="https://kimberly-dislexia.github.io/Dislexia123/images/silla.jpg" alt="Imagen 5">
+    <div class="opciones">
+        <div class="opcion" onclick="verificarRespuesta(this)">Sillla </div>
+        <div class="opcion" onclick="verificarRespuesta(this)">Sillaar</div>
+        <div class="opcion" onclick="verificarRespuesta(this)">Siila</div>
+        <div class="opcion" onclick="verificarRespuesta(this)">Silla<p style="display: inline; color: transparent;">(Correcta) </p></div>
+    </div>
+</div>
+
+<!-- Agrega tres secciones más aquí, cada una con su imagen y opciones -->
+
+<script>
+    function verificarRespuesta(opcion) {
+        // Reiniciar estilos de todas las opciones
+        const opciones = document.querySelectorAll('.opcion');
+        opciones.forEach(op => {
+            op.classList.remove('correcta', 'incorrecta');
+        });
+
+        // Verificar si la opción seleccionada es correcta
+        if (opcion.innerText.includes('Correcta')) {
+            opcion.classList.add('correcta');
+        } else {
+            opcion.classList.add('incorrecta');
+        }
+    }
+</script>
+
+</body>
+</html>
+
+

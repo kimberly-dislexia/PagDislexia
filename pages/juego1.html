@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordena las palabras</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #contenedor {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #contenedor2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #contenedor3 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .letra {
+            display: inline-block;
+            font-size: 24px;
+            cursor: pointer;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .letra2 {
+            display: inline-block;
+            font-size: 24px;
+            cursor: pointer;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .letra3 {
+            display: inline-block;
+            font-size: 24px;
+            cursor: pointer;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #resultado {
+            margin-top: 10px;
+        }
+        #resultado2 {
+            margin-top: 10px;
+        }
+        #resultado3 {
+            margin-top: 10px;
+        }
+
+
+        #reiniciar {
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+        }
+        #reiniciar2 {
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+        }
+        #reiniciar3 {
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Palabra 1</h1>
+<div id="contenedor">
+    <div class="letra" onclick="seleccionarLetra('A', 1)" id="A1">A</div>
+    <div class="letra" onclick="seleccionarLetra('I', 1)" id="I1">I</div>
+    <div class="letra" onclick="seleccionarLetra('L', 1)" id="L1">L</div>
+    <div class="letra" onclick="seleccionarLetra('O', 1)" id="O1">O</div>
+    <div class="letra" onclick="seleccionarLetra('E', 1)" id="E1">E</div>
+    <div class="letra" onclick="seleccionarLetra('T', 1)" id="T1">T</div>
+    <div class="letra" onclick="seleccionarLetra('V', 1)" id="V1">V</div>
+</div>
+
+<div id="resultado">
+    <p>Palabra Formada: <span id="palabraFormada"></span></p>
+    <p id="mensaje"></p>
+</div>
+
+<!-- <button id="reiniciar" onclick="reiniciarJuego()">Reiniciar Palabra 1</button> -->
+
+<script>
+    let palabraPropuesta = "VIOLETA";
+    let letrasDisponibles = ['V', 'I', 'O', 'L', 'E', 'T', 'A'];
+    let letrasSeleccionadas = [];
+    let palabraFormada = "";
+
+    function seleccionarLetra(letra, seccion) {
+        if (letrasDisponibles.includes(letra)) {
+            letrasSeleccionadas.push(letra);
+            actualizarPalabra();
+            document.getElementById(letra + seccion).style.display = "none";
+            letrasDisponibles = letrasDisponibles.filter(item => item !== letra);
+
+            if (palabraFormada === palabraPropuesta) {
+                document.getElementById("mensaje").innerText = "¡Bien hecho!";
+            } else if (letrasDisponibles.length === 0) {
+                document.getElementById("mensaje").innerText = "Inténtalo una vez más";
+            }
+        } else {
+            document.getElementById("mensaje").innerText = "Inténtalo una vez más";
+        }
+    }
+
+    // function reiniciarJuego() {
+    //     letrasDisponibles = ['V', 'I', 'O', 'L', 'E', 'T', 'A'];
+    //     letrasSeleccionadas = [];
+    //     palabraFormada = "";
+    //     actualizarPalabra();
+    //     document.getElementById("mensaje").innerText = "";
+
+    //     // Mostrar nuevamente las letras ocultas
+    //     letrasDisponibles.forEach(letra => {
+    //         document.getElementById(letra + seccion).style.display = "inline-block";
+    //     });
+    // }
+
+    function actualizarPalabra() {
+        palabraFormada = letrasSeleccionadas.join('');
+        document.getElementById("palabraFormada").innerText = palabraFormada;
+    }
+</script>
+
+
+<!--................................PALABRA 2 CAFE...............................................-->
+<h1>Palabra 2</h1>
+<div id="contenedor2">
+    <div class="letra2" onclick="seleccionarLetra2('A', 2)" id="A2">A</div>
+    <div class="letra2" onclick="seleccionarLetra2('C', 2)" id="C2">C</div>
+    <div class="letra2" onclick="seleccionarLetra2('F', 2)" id="F2">F</div>
+    <div class="letra2" onclick="seleccionarLetra2('E', 2)" id="E2">E</div>
+</div>
+
+<div id="resultado2">
+    <p>Palabra Formada: <span id="palabraFormada2"></span></p>
+    <p id="mensaje2"></p>
+</div>
+
+<!-- <button id="reiniciar2" onclick="reiniciarJuego2()">Reiniciar Palabra 2</button> -->
+
+<script>
+    let palabraPropuesta2 = "CAFE";
+    let letrasDisponibles2 = ['C', 'A', 'F','E'];
+    let letrasSeleccionadas2 = [];
+    let palabraFormada2 = "";
+
+    function seleccionarLetra2(letra2, seccion2) {
+        if (letrasDisponibles2.includes(letra2)) {
+            letrasSeleccionadas2.push(letra2);
+            actualizarPalabra2();
+            document.getElementById(letra2 + seccion2).style.display = "none";
+            letrasDisponibles2 = letrasDisponibles2.filter(item => item !== letra2);
+
+            if (palabraFormada2 === palabraPropuesta2) {
+                document.getElementById("mensaje2").innerText = "¡Bien hecho!";
+            } else if (letrasDisponibles2.length === 0) {
+                document.getElementById("mensaje2").innerText = "Inténtalo una vez más";
+            }
+        } else {
+            document.getElementById("mensaje2").innerText = "Inténtalo una vez más";
+        }
+    }
+
+    // function reiniciarJuego2() {
+    //     letrasDisponibles2 = ['C', 'A', 'F','E'];
+    //     letrasSeleccionadas2 = [];
+    //     palabraFormada = "";
+    //     actualizarPalabra2();
+    //     document.getElementById("mensaje2").innerText = "";
+
+    //     // Mostrar nuevamente las letras ocultas
+    //     letrasDisponibles2.forEach(letra2 => {
+    //         document.getElementById(letra2 + seccion2).style.display = "inline-block";
+    //     });
+    // }
+
+    function actualizarPalabra2() {
+        palabraFormada2 = letrasSeleccionadas2.join('');
+        document.getElementById("palabraFormada2").innerText = palabraFormada2;
+    }
+  
+</script>
+
+
+<!--................................PALABRA 3 DISLEXIA...............................................-->
+
+
+<h1>Palabra 3</h1>
+<div id="contenedor3">
+    <div class="letra3" onclick="seleccionarLetra3('I', 3)" id="I3">I</div>
+    <div class="letra3" onclick="seleccionarLetra3('D', 3)" id="D3">D</div>
+    <div class="letra3" onclick="seleccionarLetra3('S', 3)" id="S3">S</div>
+    <div class="letra3" onclick="seleccionarLetra3('E', 3)" id="E3">E</div>
+    <div class="letra3" onclick="seleccionarLetra3('L', 3)" id="L3">L</div>
+    <div class="letra3" onclick="seleccionarLetra3('I', 4)" id="I4">I</div>
+    <div class="letra3" onclick="seleccionarLetra3('A', 3)" id="A3">A</div>
+    <div class="letra3" onclick="seleccionarLetra3('X', 3)" id="X3">X</div>
+</div>
+
+<div id="resultado3">
+    <p>Palabra Formada: <span id="palabraFormada3"></span></p>
+    <p id="mensaje3"></p>
+</div>
+
+<script>
+    let palabraPropuesta3 = "DISLEXIA";
+    let letrasDisponibles3 = ['D', 'I', 'S','L', 'E', 'X','I','A'];
+    let letrasSeleccionadas3 = [];
+    let palabraFormada3 = "";
+
+    function seleccionarLetra3(letra3, seccion3) {
+        if (letrasDisponibles3.includes(letra3)) {
+            letrasSeleccionadas3.push(letra3);
+            actualizarPalabra3();
+            document.getElementById(letra3 + seccion3).style.display = "none";
+
+            let index = letrasDisponibles3.indexOf(letra3);
+            if (index !== -1) {
+            letrasDisponibles3.splice(index, 1);
+        }
+        
+            if (palabraFormada3 === palabraPropuesta3) {
+                document.getElementById("mensaje3").innerText = "¡Bien hecho!";
+            } else if (letrasDisponibles3.length === 0) {
+                document.getElementById("mensaje3").innerText = "Inténtalo una vez más";
+            }
+        } else {
+            document.getElementById("mensaje3").innerText = "Inténtalo una vez más";
+        }
+    }
+    function actualizarPalabra3() {
+        palabraFormada3 = letrasSeleccionadas3.join('');
+        document.getElementById("palabraFormada3").innerText = palabraFormada3;
+    }
+  
+</script>
+
+
+
+
+<!--................................REINICIAR...............................................-->
+<button id="reiniciar" onclick="reiniciarPagina()">Reiniciar Juego</button>
+<script>
+   
+    function reiniciarPagina() {
+        location.reload(true);
+    }
+
+</script>
+
+</body>
+</html>

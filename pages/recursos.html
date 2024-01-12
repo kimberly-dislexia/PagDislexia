@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos sobre la dislexia</title>
+
+    <style>   
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: white;
+            color: #000000;
+            text-align: right;
+            padding: 0.5em;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Agrega una transición suave al cambio de color de fondo */
+             /* Añade posición fija y fija la barra en la parte superior */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Asegura que la barra esté en la parte superior de otros elementos */
+        }
+
+
+        /* Barra de navegación transparente cuando no está en la parte superior */
+        body.with-navbar {
+            margin-top: 80px;
+        }
+
+
+        /* Añade margen superior al contenido para evitar que se superponga con la barra de navegación */
+        section {
+            background-color: #ffffff;
+            padding-top: 0px; /* Ajusta según el tamaño de tu barra de navegación */
+        }
+
+
+        .navbar a {
+            color: #080808;
+            text-decoration: none;
+            padding: 0.5em;
+        }
+
+        #inicio {
+            background-color: #008080;
+            /* Agrega bordes */
+            text-shadow: -1px -1px 0 #000,  
+                  1px -1px 0 #000,
+                 -1px  1px 0 #000,
+                  1px  1px 0 #000;
+                  /* Otras propiedades del texto*/
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            font-style: oblique;
+            padding: 0%;
+
+                /* Propiedades para la imagen de fondo */
+            background-image: url('https://images.unsplash.com/photo-1581544291234-31340be4b1b8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding-top: 2%;
+        }
+
+        #inicio h1{
+            padding-top: 1%;
+        }
+
+        #indice-imagen{
+            display: flex;
+            align-items: flex-start;
+        }
+
+        #idc-box {
+            background: #ebe9e9 none repeat scroll 0 0;
+            border: 1px solid #aaa;
+            display: table;
+            font-size: 75%;
+            margin: 1em;
+            margin-left: 5%;
+            padding: 2px;
+            width: 30%;
+        }
+
+        #idc-box li, #idc-box ul {
+            padding: 2px;
+            list-style: outside none none !important;
+        }
+
+        #imagen{
+            width: 60%;
+            margin: auto;
+        }
+
+        #img {
+            width: 320px;
+            height: 270px;
+            margin-left: 34%;
+            
+        }
+
+
+        #concepto{
+            font-family: 'Arial', sans-serif;
+            font-size: small;
+            background-color: #ffffff;
+            margin: 5%;
+        }
+
+        #concepto img{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #concepto h2{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: justify;
+            font-weight: bold;
+        }
+
+        #concepto p{
+            text-align: justify;
+            font-size: large;
+        }
+        #concepto div{
+            margin-left: 5%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #tabla-container {
+            max-width: 90%;
+            width: 90%;
+        }
+
+        table {
+            width: 90%;
+            border-collapse:collapse;
+            margin-top: 20px; /* Espacio superior */
+            font-size: medium;
+        }
+
+        th {
+            border: 1px solid black;
+            padding: 1%;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 1%;
+            text-align: justify;
+        } 
+
+        th {
+            background-color: #3331312c;
+        }
+
+        #footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            bottom: 0;
+            width: auto;
+        }
+        #footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #footer li {
+            display: inline;
+            margin-right: 10px;
+        }
+        #footer li a{
+            text-align: right;
+        }
+
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="navbar" id="navbar">
+        <a href="https://kimberly-dislexia.github.io/Dislexia123/">Inicio</a> 
+        <a href="https://kimberly-dislexia.github.io/Dislexia123/pages/recursos">Recursos</a> 
+        <a href="https://kimberly-dislexia.github.io/Dislexia123/pages/juegos">Juegos Educativos</a>
+        <a href="https://kimberly-dislexia.github.io/Dislexia123/pages/test">Tests</a>
+    </div>
+
+
+    <section id="inicio" style="width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: -100;">
+       <h1>Recursos sobre la dislexia</h1>
+    </section>
+    <!-- código para el índice e imagen--> 
+    <div id="indice-imagen">
+        <div id="idc-box">
+            <p class="idc-titulo">  <h2 style="padding-left: 5%;"> Contenido</h2> </p> 
+            <ul class="idc-lista" >
+                <ul>
+                    <li><a href="#literal1"> 1. Introducción </a></li>
+                    <li><a href="#literal2"> 2. ¿Qué es la dislexia? </a></li>
+                        <ul style="padding-left: 5%;">
+                            <li><a href="#subliteral21"> 2.1 Antecedentes </a></li>
+                        </ul>
+                    <li><a href="#literal3"> 3. Causas de la dislexia </a></li>
+                    <li><a href="#literal4"> 4. Tipos de dislexia </a></li>
+                        <ul style="padding-left: 5%;">
+                            <li><a href="#subliteral41"> 4.1. Dislexia fonológica o indirecta </a></li>
+                            <li><a href="#subliteral42"> 4.2. Dislexia superficial </a></li> 
+                            <li><a href="#subliteral43"> 4.3. Dislexia mixta o profunda </a></li>
+                        </ul>
+                    <li><a href="#literal5"> 5. ¿Cómo identificar la dislexia? </a></li>
+                        <ul style="padding-left: 5%;">
+                            <li><a href="#subliteral51"> 5.1. Dificultades en la lectura </a></li>
+                            <li><a href="#subliteral52"> 5.2. Problemas con la ortografía </a></li>
+                            <li><a href="#subliteral53"> 5.3. Lentitud en la escritura </a></li>
+                            <li><a href="#subliteral54"> 5.4. Confusión de letras y palabras </a></li>
+                            <li><a href="#subliteral55"> 5.5. Dificultades en la escritura</a></li>
+                            <li><a href="#subliteral56"> 5.6. Problemas de memoria a corto plazo </a></li> 
+                            <li><a href="#subliteral57"> 5.7. Desafíos en la adquisición de habilidades fonológicas </a></li>
+                        </ul>
+                    <li><a href="#literal6">6. Diferencia entre dislexia, discalculia, disgrafia y disortografía</a></li>
+                    <li><a href="#literal7">7. ¿Cómo ayudar a quienes poseen dislexia?</a></li>
+                        <ul style="padding-left: 5%;">
+                            <li><a href="#subliteral71"> 7.1. Reconoce las fortalezas individuales </a></li>
+                            <li><a href="#subliteral72"> 7.2. Proporciona apoyo personalizado </a></li>
+                            <li><a href="#subliteral73"> 7.3. Fomenta métodos multisensoriales </a></li>
+                            <li><a href="#subliteral74"> 7.4. Ofrece instrucciones claras y estructuradas </a></li>
+                            <li><a href="#subliteral75"> 7.5. Incorpora tecnologías de apoyo </a></li>
+                            <li><a href="#subliteral76"> 7.6. Promueve estrategias de organización </a></li>
+                            <li><a href="#subliteral77"> 7.7. Fomenta la lectura placentera </a></li>
+                            <li><a href="#subliteral78"> 7.8. Apoya la comprensión </a></li>
+                            <li><a href="#subliteral79"> 7.9. Colabora con profesionales especialiados</a></li>
+                            <li><a href="#subliteral710"> 7.10. Fomenta la conciencia y la comprensión </a></li>
+                        </ul>
+                    
+                </ul>
+            </ul>
+    
+        </div>
+        <div id="imagen">
+            <img src="https://kimberly-dislexia.github.io/Dislexia123/images/dislexia11.jpg" alt="dislexia" style="max-width: 80%; width: 1400px ; height: auto;"> <p style="font-size: small; text-align: center;">Imagen tomada de: KUFU (www.kufu.co/blog/lectura/dislexia) </p>
+        </div>
+    </div>
+    
+
+    <section id="concepto">
+        <h2 id="literal1">1. Introducción</h2>
+        <p>¡Bienvenido a nuestra comunidad dedicada a la dislexia!
+            En este espacio, buscamos ofrecer información, recursos y apoyo a todas las personas que conviven con la dislexia. Desde consejos prácticos hasta historias inspiradoras, estamos aquí para fomentar la comprensión y promover un ambiente inclusivo. Explora con nosotros el fascinante mundo de la dislexia, descubre estrategias efectivas y conecta con una comunidad que valora la diversidad y el potencial único de cada individuo. Juntos, trabajamos para derribar barreras y celebrar las habilidades que hacen que cada persona sea excepcional. ¡Únete a nosotros en este viaje hacia el entendimiento y el empoderamiento!
+        </p>
+
+
+        <h2 id="literal2">2. ¿Qué es la dislexia?</h2>
+        <p>La dislexia es un trastorno del aprendizaje que afecta la capacidad de una persona para leer, escribir y procesar la información de manera eficiente. Aunque la dislexia puede manifestarse de diversas maneras, comúnmente se asocia con dificultades en la decodificación de palabras, la ortografía y la fluidez lectora. Es importante destacar que la dislexia no está relacionada con la inteligencia; de hecho, muchas personas con dislexia tienen habilidades cognitivas sobresalientes en otras áreas. Se trata de una condición neurobiológica que puede presentarse a lo largo de toda la vida, pero con intervenciones adecuadas y apoyo, las personas con dislexia pueden desarrollar estrategias para superar los desafíos asociados y alcanzar su máximo potencial académico y personal.
+            La identificación temprana y la implementación de enfoques educativos específicos son fundamentales para apoyar a quienes viven con dislexia. Los métodos de enseñanza estructurados y adaptativos, junto con el reconocimiento de las fortalezas individuales, contribuyen a crear un entorno inclusivo que fomente el éxito académico y emocional de las personas con dislexia.
+        </p>
+        <p>
+            Considerando su perfil particular, los individuos con dislexia son niños y niñas de inteligencia normal que enfrentan dificultades específicas en actividades relacionadas con la lectura y la escritura. Por lo tanto, no se clasifica como disléxicos a aquellos niños con retraso intelectual o madurativo, discapacidades psíquicas o físicas, o aquellos que no están escolarizados o se encuentran en entornos desfavorables.
+        </p>
+        <p>
+            Debido a su naturaleza persistente, se tiende a descartar el diagnóstico de dislexia en niños que experimentan dificultades temporales en la adquisición de habilidades de lectura y escritura, las cuales desaparecen espontáneamente o después de una breve intervención.
+        </p>
+        <p>
+            Según la Clasificación Internacional de Enfermedades (CIE-10), los disléxicos presentan de manera característica dificultades en la recitación del alfabeto, la denominación de letras, la realización de rimas simples, y en el análisis o clasificación de sonidos. Además, la lectura se caracteriza por omisiones, sustituciones, distorsiones, inversiones o adiciones, lentitud, vacilaciones, problemas de seguimiento visual y déficit en la comprensión (OPS, 1997).
+        </p>
+        <p>
+            Para Etchepareborda y Habib (2000), la dislexia se define como una dificultad en la descodificación o lectura de palabras, lo que implica alteraciones en algunos de los procesos cognitivos intermedios entre la recepción de la información y la elaboración del significado.
+        </p>
+        <p>
+            Aunque se han establecido criterios de exclusión e inclusión para el diagnóstico de la dislexia, es importante destacar que no todos los niños con dislexia presentan las mismas dificultades o características. Por lo tanto, realizar un diagnóstico exhaustivo y detallado es esencial para establecer programas de intervención específicos.
+        </p>
+        <p>
+            La dislexia es el trastorno de aprendizaje más común entre la población escolar, con una prevalencia estimada entre el 5% y el 17% (Shaywitz, 1998), siendo más frecuente en niños que en niñas.
+        </p>
+        <p>
+            El principal desafío de la dislexia radica en su incompatibilidad con el sistema educativo actual, ya que todos los aprendizajes se llevan a cabo a través del código escrito. Como resultado, los niños disléxicos enfrentan dificultades para comprender ciertos contenidos, como en la materia de Conocimiento del Medio, debido a su incapacidad para llegar al significado a través de la lectura.
+
+            Los niños y niñas con dislexia deben invertir tanto esfuerzo en las tareas de lectoescritura que tienden a fatigarse, perder la concentración, distraerse y rechazar este tipo de actividades. A menudo, los padres y maestros interpretan esta conducta como desinterés y presionan para obtener un mayor esfuerzo, sin comprender que estos niños, al realizar estas tareas, se sienten como si de repente nos viéramos inmersos en una clase de escritura china.
+        </p>
+
+        <img id="img" src="https://kimberly-dislexia.github.io/Dislexia123/images/ninosvsdislexia.jpeg" alt="niños vs dislexia" style="max-width: 50%; width: 250px ;height: auto; display: block;"> <p style="text-align: center; font-size: small;">Imagen tomada de: Image Creator de Microsoft Bing (Inteligencia Artificial www.bing.com/images/create). </p>
+        
+            <ul style="font-size: 110%; text-align: justify;">
+                <li> <h3 id="subliteral21" style="display: inline">2.1. Antecedentes:</h3> 
+                    <p style="display: inline"> En 1970 la Federación Mundial de Neurología define dislexia como “Trastorno manifestado por dificultad en el aprendizaje de la lectura pese a la instrucción convencional, una inteligencia adecuada y buenas oportunidades socioculturales”.
+                    </p>
+                    <p>
+                        En 1992 en el CIE-10 se define dislexia como “Un déficit específico que no se explica por el nivel intelectual, por problemas de agudeza visual o auditiva o por una escolarización inadecuada”
+                    </p> 
+                    <p>
+                        En 2002 el DSM-IV-TR (APA,2000) se engloba la dislexia dentro de los trastornos del aprendizaje con el nombre de trastorno de la lectura y se establece que “La característica esencial de la dislexia es un rendimiento en lectura, (precisión, velocidad o comprensión), que se sitúa sustancialmente por debajo del nivel esperado en función de la edad cronológica, del cociente intelectual y de la escolarización propia de la edad del individuo”. Todos estos sistemas diagnósticos coinciden en los criterios de inclusión y exclusión indicados, así como en el origen constitucional relacionado con una alteración en el neurodesarrollo.
+                    </p>
+                    <p>
+                        En 2008 la Consejería de Educación, Ciencia e Investigación de la Región de Murcia, establece en su Guía de Actualización sobre la Dislexia del Desarrollo una definición muy completa sobre el termino dislexia considerándola como “Aquella condición relacionada con una alteración en el neurodesarrollo que lleva consigo una discapacidad específica y persistente para adquirir de forma eficaz las habilidades lectoras, a pesar de presentar un nivel intelectual adecuado, disponer de los oportunos recursos escolares y sociofamiliares, buena disposición y motivación hacia el aprendizaje y no presentar ninguna deficiencia neurológica, psíquica ni sensorial.”
+                    </p>
+               </li>
+            </ul>
+
+
+
+
+        <h2 id="literal3">3. Causas de la dislexia</h2>
+        <p>
+            La causa subyacente de la dislexia ha sido objeto de un extenso debate en las últimas décadas, generando controversia debido a la diversidad de explicaciones propuestas e incluso cuestionando su existencia.
+        </p>
+        <p>
+            Hoy en día, los estudios de neuroimagen sugieren que la dislexia tiene una base neurobiológica. En los cerebros de las personas con dislexia, se observa una alteración durante la formación neuronal durante el desarrollo embrionario. Este proceso conduce a la formación de cúmulos, conocidos como ectopias, donde ciertos grupos de neuronas y células gliales no migran adecuadamente. Estas ectopias desorganizan las conexiones en el interior de la corteza cerebral que están involucradas en los procesos de lectura y escritura. Esta explicación podría dar cuenta de la variada sintomatología de la dislexia, ya que los cúmulos de neuronas pueden establecerse en diversas áreas cerebrales, generando manifestaciones distintas.
+        </p>
+        <p>
+            Desde los primeros hallazgos en 1979 por Albert Galaburda en la Universidad de Harvard, que identificó manchas en la corteza cerebral de cerebros de personas disléxicas fallecidas debido a ectopias, se han llevado a cabo numerosos estudios con técnicas de neuroimagen. Estos estudios respaldan la idea de que ciertas áreas del hemisferio izquierdo presentan una reducida actividad, especialmente en la circunvolución frontal inferior izquierda, el área parieto-temporal y el área occipito-temporal, todas ellas implicadas en el procesamiento de la lectura.
+        </p>
+        <p>
+            Las alteraciones en el neurodesarrollo pueden tener un componente genético, ya que se estima que más del 60% de la predisposición a la dislexia tiene origen genético. Investigaciones recientes han identificado varias regiones cromosómicas, incluida una alteración en un gen del cromosoma 15, que parece estar relacionada con la formación de ectopias.
+        </p>
+        <img id="img" src="https://kimberly-dislexia.github.io/Dislexia123/images/ectopias-dislexia.jpg" alt="ectopias dislexia" style="max-width: 50%; width: 270px ;height: auto; display: block;"> <p style="text-align: center; font-size: small;">Imagen tomada de: Ladislexianet (www.ladislexia.net/causas-etiologia/). </p>
+        <p>
+            También se está explorando la relación entre estas variaciones genéticas y las dificultades en el procesamiento auditivo de los sonidos, así como su conexión con el déficit fonológico y las teorías sobre el déficit sensitivo motor (Franck Ramus, 2004). Ramus ha presentado en varios artículos los resultados de diversos estudios que respaldan la idea de que la dislexia tiene un origen neurobiológico. En la mayoría de las personas con dislexia, se identifica un déficit cognitivo en las representaciones fonológicas, así como deficiencias sensoriales de origen magnocelular y deficiencias motoras de origen cerebeloso. Sin embargo, estas últimas parecen tener una relevancia limitada en las dificultades de lectura.
+        </p>
+        <p>
+            En la actualidad, la Psicobiología ha arrojado luz sobre numerosos datos que respaldan una causa probablemente biológica de la dislexia (Ramus, 2001; Temple, 2002). Se postula que los procesos cerebrales encargados de procesar la estructura sonora del lenguaje están especialmente afectados, según estudios como los de Pugh y colaboradores (2001) y Snowling (1981). Estas hipótesis han surgido a partir de investigaciones psicobiológicas que respaldan la existencia de una "Base Genética de la dislexia", una "Base Neurológica de la dislexia", una "Base Neurofisiológica de la dislexia" y una "Base cognitiva de la dislexia".
+        </p>
+        <p>
+            A pesar de estos hallazgos recientes, aún no se ha determinado con certeza la etiología exacta de la dislexia. En resumen, se podría afirmar que la dislexia tiene un origen neurobiológico con una carga hereditaria significativa, y que la teoría del déficit fonológico prevalece como la causa principal de las dificultades de lectura en las personas con dislexia. En términos generales, se puede argumentar que las causas de la dislexia se relacionan con la disfuncionalidad de ciertas regiones cerebrales involucradas en la ejecución de la lectoescritura. Dado que cada individuo disléxico presenta afectaciones en diferentes sistemas neuronales, esto explicaría la variada sintomatología de la dislexia y destaca la importancia de establecer un diagnóstico diferencial preciso para determinar las estrategias de intervención más apropiadas en cada caso.
+        </p>
+        <img id="img" src="https://kimberly-dislexia.github.io/Dislexia123/images/causas-dislexia.jpg" alt="causas dislexia " style="max-width: 50%; width: 350px ;height: auto; display: block;"> <p style="text-align: center; font-size: small;">Imagen tomada de: Webconsultas (https://www.webconsultas.com/dislexia/causas-de-la-dislexia-751). </p>
+        
+
+
+
+        <h2 id="literal4">4. Tipos de dislexia</h2>
+        <p>
+            En primer lugar, es importante tener en cuenta que dentro del espectro de la dislexia existe una considerable variación individual, a pesar de que teóricamente se manifieste una sintomatología común. En consecuencia, podemos afirmar que este síndrome se presenta en diversas formas según las alteraciones específicas que conlleve.
+        </p>
+        <p>
+            En el ámbito educativo, se hace referencia comúnmente a la dislexia del desarrollo o evolutiva, ya que la dislexia adquirida se produce como resultado de una lesión cerebral en las áreas encargadas del procesamiento lectoescritor.
+        </p>
+        <p>
+            Asimismo, es crucial distinguir entre la dislexia del retraso lector, los trastornos específicos del lenguaje, el retraso madurativo, el TDAH u otras patologías o discapacidades que puedan generar dificultades en la adquisición de la lectoescritura. En este contexto, es fundamental tener en cuenta que los síntomas de un retraso lector suelen desaparecer de manera natural o mediante una intervención breve, lo que nos lleva a realizar un diagnóstico preciso de dislexia evolutiva o del desarrollo únicamente después de observar los efectos de una intervención a corto plazo.
+        </p>
+        <p>
+            Aunque existen diversas clasificaciones y terminologías, en este caso adoptaremos una clasificación basada en las vías de procesamiento o acceso al léxico que se ven afectadas.
+        </p>
+        <img src="https://kimberly-dislexia.github.io/Dislexia123/images/esquema.png" alt="esquema-dislexia" style="max-width: 50%; width: 550px ;height: auto; display: block;"> <p style="text-align: center; font-size: small;">Imagen tomada de: Ladislexianet (https://www.ladislexia.net/tipos-clasificacion/). </p>
+        <p>
+            Donde: SAA, Sistema de Análisis Auditivo; SAV, Sistema de Análisis Visual; LIA, Léxico de Input Auditivo (Almacén Léxico Auditivo) ; LIV, Léxico de Input Visual (Almacén Léxico Visual); SS, Sistema Semántico; LOH, Léxico de Output de Habla (Almacén de Producción Léxico Fonológico); LOG, Léxico de Output Grafémico (Almacén de Producción Léxico Ortográfico); CG-F, Conversión Grafema-Fonema; CF-, Conversión Fonema-Grafema; NF, Nivel Fonémico; NG, Nivel Grafémico; NA, Nivel Alográfico; PG, Patrones Grafomotores
+        </p>
+        <p>
+            Fuente: Revista Complutense de Educación. Vol.13 Núm 1 (2002).
+        </p>
+        <p>
+            Por lo tanto, podemos diferenciar entre:
+        </p>
+            <ul style="font-size: 110%; text-align: justify;">
+                <li> <h3 id="subliteral41" style="display: inline">4.1. Dislexia fonológica o indirecta:</h3> 
+                    <p style="display: inline"> Se corresponde con el mal funcionamiento de la ruta fonológica, es decir, de la vía indirecta que utiliza la conversión grafema-fonema para acceder al léxico.
+                    </p> 
+                    <p>
+                        Este tipo de dislexia dificulta la lectura de palabras largas y poco frecuentes y de palabras funcionales e imposibilita la lectura de pseudopalabras, donde suelen cometer muchos errores visuales que provocan lexicalizaciones, es decir, leen “espada” cuando pone “espaca”.
+                        También presentan numerosos errores morfológicos o derivativos en los que mantienen la raíz de las palabras pero cambian los morfemas.
+                        Se observan mayor número de errores en la lectura de las palabras función que en palabras de contenido.
+                        Presenta mejores resultados en la lectura de palabras familiares tanto regulares como irregulares.
+                    </p>
+                    <img src="https://kimberly-dislexia.github.io/Dislexia123/images/ruta-fonológica.png" alt="ruta fonologica" style="max-width: 50%; width: 450px ;height: auto; display: block;"> <p style="text-align: center; font-size: small;">Imagen tomada de: Ladislexianet (https://www.ladislexia.net/tipos-clasificacion/). </p>
+                </li>
+
+                <li> <h3 id="subliteral42" style="display: inline">4.2. Dislexia superficial:</h3> 
+                    <p style="display: inline"> Conlleva el mal funcionamiento de la ruta visual, léxica o directa, por lo que el sujeto no presenta grandes dificultades en la lectura a través de la conversión grafema-fonema de palabras regulares.
+                    </p> 
+                    <p>
+                        Si tendrá problemas a la hora de leer palabras irregulares, (por ejemplo de la lengua inglesa), tendiendo a regularizarlas, por lo que normalmente comenten numerosos errores de omisión, adición o sustitución de letras.
+                        Presentan un nivel mejor en tareas de lectura de pseudopalabras en comparación con los disléxicos fonológicos.
+                        Tienen mayores problemas con la ortografía arbitraria y suelen confundir las palabras homófonas, ya que sólo se guían por la información auditiva.
+                    </p>
+                    
+                    <img src="https://kimberly-dislexia.github.io/Dislexia123/images/ruta-léxica1.png" alt="ruta lexica" style="max-width: 50%; width: 450px ;height: auto; display: block;"> <p style="text-align: center; font-size: small;">Imagen tomada de: Ladislexianet (https://www.ladislexia.net/tipos-clasificacion/). </p>
+                </li>
+
+                <li> <h3 id="subliteral43" style="display: inline">4.3. Dislexia mixta o profunda:</h3> 
+                    <p style="display: inline"> Se caracteriza por presentar déficits en ambas rutas, lo que provoca que se comentan errores semánticos, es decir, que se lean unas palabras por otras que no tienen ningún parecido visual pero sí semántico.
+                        A parte de los errores semánticos presentan dificultades para leer pseudopalabras, palabras función, verbos y palabras poco frecuentes, cometiendo numerosos errores visuales y derivativos a la hora de leer y presentando dificultades para acceder al significado.
+                    </p> 
+                    <img src="https://kimberly-dislexia.github.io/Dislexia123/images/niño-dislexia-f.jpg" alt="niño frustrado" style="max-width: 50%; width: 250px ;height: auto; display: block;"> <p style="text-align: center; font-size: small;">Imagen tomada de: Ladislexianet (https://www.ladislexia.net/tipos-clasificacion/). </p>
+                </li>
+            </ul>
+
+
+
+        <h2 id="literal5">5. ¿Cómo identificar la dislexia?</h2>
+        <p>Identificar a un individuo con dislexia puede ser un proceso que involucra la observación de ciertos signos y la colaboración entre educadores, padres y profesionales de la salud. Aquí hay algunas pautas generales y también se debe tomar en cuenta que la dislexia puede variar en su presentación y gravedad, por lo que la evaluación formal por un profesional especializado es clave para un diagnóstico preciso. 
+        </p>
+        <img id="img" src="https://kimberly-dislexia.github.io/Dislexia123/images/escribiendo.jpg" alt="Diagnosticar la dislexia" style="max-width: 50%; width: 400px ;height: auto; display: block;"> <p style="text-align: center; font-size: small;">Imagen tomada de: Psige Psicología (https://www.psigecv.com/post/disgrafía-y-disortografía). </p>
+        
+            <ul style="font-size: 110%; text-align: justify;">
+                <li> <h3 id="subliteral51" style="display: inline">5.1. Dificultades en la lectura:</h3> 
+                     <p style="display: inline"> Un estudiante con dislexia puede tener problemas para reconocer palabras comunes, leer en voz alta con precisión y fluidez, y comprender el significado de lo que lee.
+                     </p> 
+                </li>
+
+                <li> <h3 id="subliteral52" style="display: inline">5.2. Problemas con la ortografía:</h3> 
+                    <p style="display: inline"> La dislexia a menudo se asocia con dificultades para deletrear palabras correctamente y aplicar reglas ortográficas de manera consistente.
+                    </p> 
+               </li>
+
+               <li> <h3 id="subliteral53" style="display: inline">5.3. Lentitud en la escritura:</h3> 
+                <p style="display: inline"> Los estudiantes con dislexia pueden leer a un ritmo más lento que sus compañeros, ya que la decodificación de palabras puede ser un proceso más laborioso.
+                </p> 
+               </li>
+
+               <li> <h3 id="subliteral54" style="display: inline">5.4. Confusión de letras y palabras:</h3> 
+                <p style="display: inline"> La inversión o confusión de letras y palabras comunes, como "b" y "d" o "was" y "saw", podría ser un signo de dislexia.
+                </p> 
+               </li>
+
+               <li> <h3 id="subliteral55" style="display: inline">5.5. Dificultades en la escritura:</h3> 
+                <p style="display: inline"> La expresión escrita puede ser desafiante, con problemas para organizar ideas de manera coherente y dificultades en la gramática y la puntuación.
+                </p> 
+               </li>
+
+               <li> <h3 id="subliteral56" style="display: inline">5.6. Problemas de memoria a corto plazo:</h3> 
+                <p style="display: inline"> Los estudiantes con dislexia pueden tener dificultades para recordar secuencias, instrucciones verbales o información recién aprendida.
+                </p> 
+               </li>
+
+               <li> <h3 id="subliteral57" style="display: inline">5.7. Desafíos en la adquisición de habilidades fonológicas:</h3> 
+                <p style="display: inline"> La conciencia fonológica, que implica la capacidad de reconocer y manipular los sonidos en las palabras, a menudo se ve afectada en individuos con dislexia.
+                </p> 
+               </li>
+            </ul>
+            <p>
+                En la sección Tests de esta página encontrará más información y ejemplos de tests utilizados para diagnosticar la dislexia:
+                <a href="https://kimberly-dislexia.github.io/Dislexia123/pages/test"  target="_blank">TESTS</a>
+            </p>
+
+
+
+
+        <h2 id="literal6">6. Diferencia entre dislexia, discalculia, disgrafia y disortografía</h2>
+        <p>Las condiciones de dislexia, discalculia, disgrafía y disortografía son trastornos del aprendizaje que afectan áreas específicas del desarrollo académico. A continuación te presentamos una tabla donde se describen las características generales de cada una para poder diferenciarlas: 
+        </p>
+        <!-- TABLA DE DIFERENCIA ENTRE DISLEXIA, DISCALCULIA, DISGRAFIA Y DISORTOGRAFIA-->
+        <div id="tabla-container"> 
+            <table border="1">
+                <!-- Encabezado de la tabla -->
+               <tr>
+                   <th>Trastorno</th>
+                   <th>Definición</th>
+                   <th>Características</th>
+               </tr>
+               <!-- Fila 1 -->
+               <tr>
+                   <td>Dislexia</td>
+                   <td>Es un trastorno del aprendizaje que afecta principalmente la habilidad de una persona para leer con precisión y fluidez. </td>
+                   <td>Dificultades en la decodificación de palabras, problemas para reconocer palabras comunes y lentitud en la lectura. No está relacionada con la inteligencia.</td>
+               </tr>
+               <!-- Fila 2 -->
+               <tr>
+                   <td>Discalculia</td>
+                   <td>Es un trastorno de la escritura que afecta la habilidad de una persona para expresarse por escrito.</td>
+                   <td>Dificultades en la coordinación motora fina, problemas con la gramática y la ortografía, y una escritura generalmente menos legible.</td>
+               </tr>
+               <!-- Fila 3 -->
+               <tr>
+                   <td>Disgrafía</td>
+                   <td>Es un trastorno de la escritura que afecta la habilidad de una persona para expresarse por escrito.</td>
+                   <td>Dificultades en la coordinación motora fina, problemas con la gramática y la ortografía, y una escritura generalmente menos legible.</td>
+               </tr>
+               <!-- Fila 4 -->
+               <tr>
+                   <td>Disortografía</td>
+                   <td>Es un trastorno específico de la escritura que se centra en dificultades específicas con la ortografía.</td>
+                   <td>Dificultades para deletrear palabras correctamente, confusión de letras y sílabas, y errores ortográficos persistentes.</td>
+               </tr>
+               <!-- Fila 5 -->
+               <tr>
+                   <td>Parafasia </td>
+                   <td>Es un trastorno de la comunicación en el cual se producen errores en la producción del habla, generalmente involucrando la sustitución, omisión o inversión de sonidos, sílabas o palabras.</td>
+                   <td>Dificultad para mantener una fluidez normal en la expresión oral, la sustitución de una palabra por otra ("televisor" por "teléfono"), la inversión de sonidos dentro de una palabra, la omisión de sonidos o sílabas, agregación de sonidos dentro de una palabra, neologismos, confusión sistemática donde usa de palabras incorrectas que tienen significados similares pero no son apropiadas en el contexto.</td>
+               </tr>
+           </table>
+        </div>
+        <p style="font-size: small; text-align: center;">Fuente: Propia </p>
+
+
+
+        <h2 id="literal7">7. ¿Cómo ayudar a quienes poseen dislexia?</h2>
+        <p>En esta sección, exploraremos estrategias prácticas y enfoques comprensivos diseñados para ayudar a aquellos con dislexia a superar obstáculos y destacar en su aprendizaje. Ya sea en el entorno educativo, laboral o cotidiano, estos consejos están diseñados para promover la inclusión, la comprensión y el empoderamiento de las personas con dislexia.
+        </p>
+            <ul style="font-size: 110%; text-align: justify;">
+                <li> <h3 id="subliteral71" style="display: inline">7.1. Reconoce las fortalezas individuales:</h3> 
+                     <p style="display: inline"> Enfócate en las habilidades y fortalezas únicas de la persona con dislexia para fomentar la autoestima y la motivación.
+                     </p> 
+                </li>
+
+                <li> <h3 id="subliteral72" style="display: inline">7.2. Proporciona apoyo personalizado:</h3> 
+                    <p style="display: inline;"> Adapta el entorno educativo para satisfacer las necesidades específicas del estudiante, como materiales accesibles y enfoques de aprendizaje personalizados.
+                    </p> 
+               </li>
+
+               <li> <h3 id="subliteral73" style="display: inline ">7.3. Fomenta métodos multisensoriales:</h3> 
+                <p style="display: inline"> Utiliza enfoques que involucren múltiples sentidos, como la vista, el oído y el tacto, para fortalecer la conexión entre palabras y conceptos.
+                </p> 
+               </li>
+
+               <li> <h3 id="subliteral74" style="display: inline">7.4. Ofrece instrucciones claras y estructuradas:</h3> 
+                <p style="display: inline"> Proporciona instrucciones paso a paso y utiliza una estructura clara en las actividades para facilitar la comprensión.
+                </p> 
+               </li>
+
+               <li> <h3 id="subliteral75" style="display: inline">7.5. Incorpora tecnología de apoyo:</h3> 
+                <p style="display: inline"> Introduce herramientas tecnológicas como lectores de pantalla, software de reconocimiento de voz o aplicaciones específicas para la dislexia.
+                </p> 
+               </li>
+
+               <li> <h3 id="subliteral76" style="display: inline">7.6. Promueve estrategias de organización:</h3> 
+                <p style="display: inline"> Enseña y refuerza técnicas de organización, como el uso de cuadernos, colores y listas para ayudar en la planificación y la memoria.
+                </p> 
+               </li>
+
+               <li> <h3 id="subliteral77" style="display: inline">7.7. Fomenta la lectura placentera:</h3> 
+                <p style="display: inline"> Cultiva el amor por la lectura proporcionando libros adaptados a su nivel de habilidad e intereses, y crea un ambiente positivo alrededor de la lectura.
+                </p> 
+               </li>
+
+               <li> <h3 id="subliteral78" style="display: inline">7.8. Apoya la comprensión de texto:</h3> 
+                <p style="display: inline"> Enseña estrategias específicas para mejorar la comprensión lectora, como resumir, hacer preguntas y relacionar la lectura con experiencias personales.
+                </p> 
+               </li>
+
+               <li> <h3 id="subliteral79" style="display: inline">7.9. Colabora con profesionales especializados:</h3> 
+                <p style="display: inline"> Trabaja en estrecha colaboración con profesionales de la educación especial y terapeutas del habla para garantizar una intervención integral.
+                </p> 
+               </li>
+
+               <li> <h3 id="subliteral710" style="display: inline">7.10. Fomenta la conciencia y la comprensión:</h3> 
+                <p style="display: inline"> Educa a compañeros de clase y familiares sobre la dislexia para fomentar la comprensión y el apoyo en todos los aspectos de la vida del estudiante.
+                </p> 
+               </li>
+            </ul>
+         <img id="img" src="https://kimberly-dislexia.github.io/Dislexia123/images/ayudardislexia.jpeg" alt="Ayudar a personas con dislexia" style="max-width: 50%; width: 400px ;height: auto; display: block;"> <p style="font-size: small; text-align: center;"> Imagen tomada de: Ceupe magazine (www.ceupe.com/blog/consejos-para-ayudar-a-ninos-con-dislexia.html) </p>
+        
+
+        
+    </section>
+
+    <section id="footer">
+        <p>&copy; 2023 Página para Estudiantes con Dislexia diseñada por Kimberly Alba.</p>
+
+        
+
+     </section>
+
+     <script>
+        // Añade la clase al hacer scroll
+        window.onscroll = function() { scrollFunction() };
+    
+        function scrollFunction() {
+            const navbar = document.getElementById("navbar");
+    
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                navbar.style.backgroundColor = "#ffffff70"; // Cambia el color al hacer scroll hacia abajo
+                document.body.classList.add("with-navbar");
+            } else {
+                navbar.style.backgroundColor = "white"; // Restaura el color inicial
+                document.body.classList.remove("with-navbar");
+            }
+        }
+    </script>
+
+</body>
+</html>
+
