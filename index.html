@@ -19,7 +19,6 @@
         .navbar {
             background-color: white;
             color: #000000;
-            text-align: right;
             padding: 0.5em;
             transition: background-color 0.3s ease, color 0.3s ease; /* Agrega una transición suave al cambio de color de fondo */
              /* Añade posición fija y fija la barra en la parte superior */
@@ -43,10 +42,13 @@
         }
 
 
-        .navbar a {
+        .navbar ul a {
             color: #080808;
             text-decoration: none;
             padding: 0.5em;
+            margin-top: 0%;
+            margin-bottom: 0%;
+            border: 1px solid black;
         }
 
         #inicio {
@@ -246,28 +248,60 @@
 
 
 <body>
+
+   <!-- --------------------- Barra de navegación ------------------------ -->
+     
     <div class="navbar" id="navbar">
+        <a style="display:inline; position:absolute; z-index: 2;" href="https://kimberly-dislexia.github.io/PagDislexia/">
+            <img style="height: 30%; width:35%" src="https://kimberly-dislexia.github.io/PagDislexia/images/utn_letras.png" alt="Inicio">
+        </a>
+        <ul style="margin-top:0.25%; margin-bottom:0.25%; margin-right:1% ;text-align:right">
         <a href="https://kimberly-dislexia.github.io/PagDislexia/">Inicio</a> 
-        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/recursos">Recursos</a> 
-        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/juegos">Juegos Educativos</a>
-        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/test">Tests</a>
+        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/recursos">Teoría</a> 
+        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/juegos">Juegos</a>
+        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/audivisuales">Recursos audiovisuales</a>
+        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/test">Hojas descargables</a>
+        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/datoscuriosos">¿Sabías qué?</a>
+        </ul>
+        
     </div>
 
 
     <section id="inicio">
-        <img style="border-radius:50%;margin-left: 0%;position:absolute; max-width:10% ; width:10%; height:auto; background-color:#ffffff80; display:inline" src="https://kimberly-dislexia.github.io/PagDislexia/images/utn_logo.png" alt="utn_logo">
+        <img style="border-radius:50%;margin-left: 0%;position:absolute; max-width:10% ; width:10%; height:auto; background-color:#ffffff80; display:inline; margin-top:1%" src="https://kimberly-dislexia.github.io/PagDislexia/images/utn_logo.png" alt="utn_logo">
         <h1 style="margin-left: 35%; position:absolute;"> Universidad Técnica del Norte </h1>
         <h3 style="margin-left: 34%;margin-top:6%; position:absolute"> Facultad de Educación, Ciencia y Tecnología </h3>
         <h3 style="margin-left: 38%;margin-top:8.5%; position:absolute"> Licenciatura en Educación Básica </h3>
-        <img style=" border-radius:50%;margin-left: 88%; max-width:10% ; width:10s%; height:auto; background-color:#ffffff80" src="https://kimberly-dislexia.github.io/PagDislexia/images/utn_fecyt_logo.png" alt="utn_fecyt_logo">
+        <img style=" border-radius:50%;margin-left: 88%; max-width:10% ; width:9%; height:auto; background-color:#ffffff80; margin-top:2%" src="https://kimberly-dislexia.github.io/PagDislexia/images/utn_fecyt_logo.png" alt="utn_fecyt_logo">
         <h3 style="margin-top: 1%; margin-bottom:0.5%"> Propuesta de Diseño de página web para fortalecer la lectoescritura en los estudiantes de décimo grado</h3>
         <h3 style="margin:0%;"> Autor: Kimberly Alba </h3>
-        <h2 style="color: #f01111"> Tema: Dislexia</h2> 
+        <h2 style="color: #f01111;"> Tema: Dislexia</h2> 
         
         
-    
+        <p style="text-align: right; font-size: small; margin-top: 0; margin-bottom: 0;">Imagen tomada de: Editorial UTN (https://issuu.com/utnuniversity/docs/boletin_estadistico_2022). </p>
     </section>
-    <p style="text-align: right; font-size: small; margin-top: 0; margin-bottom: 0;">Imagen tomada de: Editorial UTN (https://issuu.com/utnuniversity/docs/boletin_estadistico_2022). </p>
+    
+
+
+    <!-- ------------  Iconos para todas las pestañas -------- -->
+
+    <div class="icon-container" style="padding-top: 2%; background-color:#33333348; margin:0.25%">
+        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/recursos" class="icon-link">
+            <img src="https://kimberly-dislexia.github.io/PagDislexia/images/recursos.png" alt="recursos" style="width: 100px;height: auto;">
+            <p>Teoría</p>
+        </a>
+        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/juegos" class="icon-link">
+            <img src="https://kimberly-dislexia.github.io/PagDislexia/images/juegos.png" alt="juegos" style="width: 100px;height: auto;">
+            <p>Juegos</p>
+        </a>
+        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/test" class="icon-link">
+            <img src="https://kimberly-dislexia.github.io/PagDislexia/images/test.png" alt="Tests" style="width: 100px;height: auto;">
+            <p>Hojas descargables</p>
+        </a>
+    </div>
+
+
+  <!-- --------------  Toda la info del body ------------------ -->
 
     <section id="concepto">
         <div class="contenedor">
@@ -350,39 +384,23 @@
                     <iframe width="100%" height="280" src="https://www.youtube.com/embed/MCH8QrJ3pSI" frameborder="0" allowfullscreen></iframe>
                     <iframe width="100%" height="280" src="https://www.youtube.com/embed/CWhTCAwBrtU" frameborder="0" allowfullscreen></iframe>
 
-                </ul> 
-                 
-        
-                
+                </ul>     
             </div>
-
-            
-
-
         </div>
      </section>
 
 
-    
-    <div class="icon-container">
-        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/recursos" class="icon-link">
-            <img src="https://kimberly-dislexia.github.io/PagDislexia/images/recursos.png" alt="recursos" style="width: 100px;height: auto;">
-            <p>Recursos</p>
-        </a>
-        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/juegos" class="icon-link">
-            <img src="https://kimberly-dislexia.github.io/PagDislexia/images/juegos.png" alt="juegos" style="width: 100px;height: auto;">
-            <p>Juegos</p>
-        </a>
-        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/test" class="icon-link">
-            <img src="https://kimberly-dislexia.github.io/PagDislexia/images/test.png" alt="Tests" style="width: 100px;height: auto;">
-            <p>Tests</p>
-        </a>
-    </div>
 
+     <!-- ------------------ Seccion final con el autor ------------------- -->
     <section id="footer">
         <p>&copy; 2023 Página para Estudiantes con Dislexia diseñada por Kimberly Alba.</p>
 
      </section>
+
+
+
+
+     <!-- ----- Script para que la barra de navegación se haga transparente cuando se hace scroll hacia abajo ---- -->
 
      <script>
         // Añade la clase al hacer scroll
