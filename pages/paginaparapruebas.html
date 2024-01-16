@@ -331,7 +331,7 @@
 
 <!-- codigo para el juego 3 con varias imagenes  -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -440,11 +440,11 @@
         <div class="opcion" onclick="verificarRespuesta(this)">Siila</div>
         <div class="opcion" onclick="verificarRespuesta(this)">Silla<p style="display: inline; color: transparent;">(Correcta) </p></div>
     </div>
-</div>
+</div> -->
 
 <!-- Agrega tres secciones más aquí, cada una con su imagen y opciones -->
 
-<script>
+<!-- <script>
     function verificarRespuesta(opcion) {
         // Reiniciar estilos de todas las opciones
         const opciones = document.querySelectorAll('.opcion');
@@ -462,6 +462,122 @@
 </script>
 
 </body>
+</html> --> 
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de Videos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            overflow: hidden; /* Evitar barras de desplazamiento horizontales */
+        }
+
+        #carrusel-container {
+            display: flex;
+            overflow: hidden;
+            border: 5px solid #333;
+            margin: 20px;
+        }
+
+        .video {
+            flex: 0 0 50%;
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: #fff;
+            border: 5px solid #ddd;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            outline: none;
+        }
+
+        .flecha {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        #flecha-izquierda {
+            left: 10px;
+        }
+
+        #flecha-derecha {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="carrusel-container">
+        <!-- Video 1 -->
+        <div class="video">
+            <video controls>
+                <source src="https://kimberly-dislexia.github.io/PagDislexia/videos/Dislexia_360.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    
+        <!-- Video 2 -->
+        <div class="video">
+            <video controls>
+                <source src="https://kimberly-dislexia.github.io/PagDislexia/videos/Discriminacion_auditiva.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    
+        <!-- Agrega más videos según sea necesario -->
+    </div>
+
+<div id="flecha-izquierda" class="flecha" onclick="cambiarVideo(-1)">&#10094;</div>
+<div id="flecha-derecha" class="flecha" onclick="cambiarVideo(1)">&#10095;</div>
+
+<script>
+    let videoActual = 1;
+
+    function cambiarVideo(n) {
+        mostrarVideo(videoActual += n);
+    }
+
+    function mostrarVideo(n) {
+        const videos = document.querySelectorAll('.video video');
+        
+        if (n > videos.length) {
+            videoActual = 1;
+        }
+        if (n < 1) {
+            videoActual = videos.length;
+        }
+
+        videos.forEach(video => {
+            video.style.display = 'none';
+        });
+
+        videos[videoActual - 1].style.display = 'block';
+    }
+
+    mostrarVideo(videoActual); // Mostrar el primer video al cargar la página
+</script>
+
+</body>
 </html>
+
+
+
+
+
+
+
 
 

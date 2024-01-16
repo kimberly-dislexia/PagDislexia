@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo hacer un Carrousel con HTML, CSS y JS</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script defer src="js/app.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="navbar" id="navbar">
+        <a style="display:inline; position:absolute; z-index: 2;" href="https://kimberly-dislexia.github.io/PagDislexia/">
+            <img style="height: 30%; width:35%" src="https://kimberly-dislexia.github.io/PagDislexia/images/utn_letras.png" alt="Inicio">
+        </a>
+    </div>
+    <div style="display: block;  position:absolute; z-index: 2; margin-top:-30em; color:brown; width:38%; padding:2%;">
+        <h1 style="font-size:x-large; background-color: rgb(252, 158, 231); text-align: center;">Galería de videos</h1>
+    </div>
+
+    <div class="carrousel">
+        <div class="grande">
+            <img src="assets/02.jpg" alt="Imagen 1" class="img">
+            <img src="assets/03.jpg" alt="Imagen 2" class="img">
+            <img src="assets/02.jpg" alt="Imagen 1" class="img">
+            <img src="assets/03.jpg" alt="Imagen 2" class="img">
+        </div>
+
+        <ul class="puntos">
+            <li class="punto activo"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+        </ul>
+    </div>
+
+</body>
+</html>
