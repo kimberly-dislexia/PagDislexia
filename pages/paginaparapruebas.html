@@ -464,114 +464,107 @@
 </body>
 </html> --> 
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrusel de Videos</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            overflow: hidden; /* Evitar barras de desplazamiento horizontales */
-        }
+<!-- TABLA DE DIFERENCIA ENTRE DISLEXIA, DISCALCULIA, DISGRAFIA Y DISORTOGRAFIA-->
+<div id="tabla-container"> 
+    <table border="1">
+        <!-- Encabezado de la tabla -->
+       <tr>
+           <th>Trastorno</th>
+           <th>Definición</th>
+           <th>Características</th>
+       </tr>
+       <!-- Fila 1 -->
+       <tr>
+           <td>Dislexia</td>
+           <td>Es un trastorno del aprendizaje que afecta principalmente la habilidad de una persona para leer con precisión y fluidez. </td>
+           <td>Dificultades en la decodificación de palabras, problemas para reconocer palabras comunes y lentitud en la lectura. No está relacionada con la inteligencia.</td>
+       </tr>
+       <!-- Fila 2 -->
+       <tr>
+           <td>Discalculia</td>
+           <td>Es un trastorno de la escritura que afecta la habilidad de una persona para expresarse por escrito.</td>
+           <td>Dificultades en la coordinación motora fina, problemas con la gramática y la ortografía, y una escritura generalmente menos legible.</td>
+       </tr>
+       <!-- Fila 3 -->
+       <tr>
+           <td>Disgrafía</td>
+           <td>Es un trastorno de la escritura que afecta la habilidad de una persona para expresarse por escrito.</td>
+           <td>Dificultades en la coordinación motora fina, problemas con la gramática y la ortografía, y una escritura generalmente menos legible.</td>
+       </tr>
+       <!-- Fila 4 -->
+       <tr>
+           <td>Disortografía</td>
+           <td>Es un trastorno específico de la escritura que se centra en dificultades específicas con la ortografía.</td>
+           <td>Dificultades para deletrear palabras correctamente, confusión de letras y sílabas, y errores ortográficos persistentes.</td>
+       </tr>
+       <!-- Fila 5 -->
+       <tr>
+           <td>Parafasia </td>
+           <td>Es un trastorno de la comunicación en el cual se producen errores en la producción del habla, generalmente involucrando la sustitución, omisión o inversión de sonidos, sílabas o palabras.</td>
+           <td>Dificultad para mantener una fluidez normal en la expresión oral, la sustitución de una palabra por otra ("televisor" por "teléfono"), la inversión de sonidos dentro de una palabra, la omisión de sonidos o sílabas, agregación de sonidos dentro de una palabra, neologismos, confusión sistemática donde usa de palabras incorrectas que tienen significados similares pero no son apropiadas en el contexto.</td>
+       </tr>
+   </table>
+</div>
+<p style="font-size: small; text-align: center;">Fuente: Propia </p>
 
-        #carrusel-container {
-            display: flex;
-            overflow: hidden;
-            border: 5px solid #333;
-            margin: 20px;
-        }
 
-        .video {
-            flex: 0 0 50%;
-            box-sizing: border-box;
-            padding: 10px;
-            background-color: #fff;
-            border: 5px solid #ddd;
-        }
 
-        video {
-            width: 100%;
-            height: auto;
-            outline: none;
-        }
+<h2 id="literal7">6. ¿Cómo ayudar a quienes poseen dislexia?</h2>
+<p>En esta sección, exploraremos estrategias prácticas y enfoques comprensivos diseñados para ayudar a aquellos con dislexia a superar obstáculos y destacar en su aprendizaje. Ya sea en el entorno educativo, laboral o cotidiano, estos consejos están diseñados para promover la inclusión, la comprensión y el empoderamiento de las personas con dislexia.
+</p>
+    <ul style="font-size: 110%; text-align: justify;">
+        <li> <h3 id="subliteral71" style="display: inline">6.1. Reconoce las fortalezas individuales:</h3> 
+             <p style="display: inline"> Enfócate en las habilidades y fortalezas únicas de la persona con dislexia para fomentar la autoestima y la motivación.
+             </p> 
+        </li>
 
-        .flecha {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 24px;
-            cursor: pointer;
-            color: #333;
-        }
+        <li> <h3 id="subliteral72" style="display: inline">6.2. Proporciona apoyo personalizado:</h3> 
+            <p style="display: inline;"> Adapta el entorno educativo para satisfacer las necesidades específicas del estudiante, como materiales accesibles y enfoques de aprendizaje personalizados.
+            </p> 
+       </li>
 
-        #flecha-izquierda {
-            left: 10px;
-        }
+       <li> <h3 id="subliteral73" style="display: inline ">6.3. Fomenta métodos multisensoriales:</h3> 
+        <p style="display: inline"> Utiliza enfoques que involucren múltiples sentidos, como la vista, el oído y el tacto, para fortalecer la conexión entre palabras y conceptos.
+        </p> 
+       </li>
 
-        #flecha-derecha {
-            right: 10px;
-        }
-    </style>
-</head>
-<body>
+       <li> <h3 id="subliteral74" style="display: inline">6.4. Ofrece instrucciones claras y estructuradas:</h3> 
+        <p style="display: inline"> Proporciona instrucciones paso a paso y utiliza una estructura clara en las actividades para facilitar la comprensión.
+        </p> 
+       </li>
 
-    <div id="carrusel-container">
-        <!-- Video 1 -->
-        <div class="video">
-            <video controls>
-                <source src="https://kimberly-dislexia.github.io/PagDislexia/videos/Dislexia_360.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
-        </div>
-    
-        <!-- Video 2 -->
-        <div class="video">
-            <video controls>
-                <source src="https://kimberly-dislexia.github.io/PagDislexia/videos/Discriminacion_auditiva.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
-        </div>
-    
-        <!-- Agrega más videos según sea necesario -->
-    </div>
+       <li> <h3 id="subliteral75" style="display: inline">6.5. Incorpora tecnología de apoyo:</h3> 
+        <p style="display: inline"> Introduce herramientas tecnológicas como lectores de pantalla, software de reconocimiento de voz o aplicaciones específicas para la dislexia.
+        </p> 
+       </li>
 
-<div id="flecha-izquierda" class="flecha" onclick="cambiarVideo(-1)">&#10094;</div>
-<div id="flecha-derecha" class="flecha" onclick="cambiarVideo(1)">&#10095;</div>
+       <li> <h3 id="subliteral76" style="display: inline">6.6. Promueve estrategias de organización:</h3> 
+        <p style="display: inline"> Enseña y refuerza técnicas de organización, como el uso de cuadernos, colores y listas para ayudar en la planificación y la memoria.
+        </p> 
+       </li>
 
-<script>
-    let videoActual = 1;
+       <li> <h3 id="subliteral77" style="display: inline">6.7. Fomenta la lectura placentera:</h3> 
+        <p style="display: inline"> Cultiva el amor por la lectura proporcionando libros adaptados a su nivel de habilidad e intereses, y crea un ambiente positivo alrededor de la lectura.
+        </p> 
+       </li>
 
-    function cambiarVideo(n) {
-        mostrarVideo(videoActual += n);
-    }
+       <li> <h3 id="subliteral78" style="display: inline">6.8. Apoya la comprensión de texto:</h3> 
+        <p style="display: inline"> Enseña estrategias específicas para mejorar la comprensión lectora, como resumir, hacer preguntas y relacionar la lectura con experiencias personales.
+        </p> 
+       </li>
 
-    function mostrarVideo(n) {
-        const videos = document.querySelectorAll('.video video');
-        
-        if (n > videos.length) {
-            videoActual = 1;
-        }
-        if (n < 1) {
-            videoActual = videos.length;
-        }
+       <li> <h3 id="subliteral79" style="display: inline">6.9. Colabora con profesionales especializados:</h3> 
+        <p style="display: inline"> Trabaja en estrecha colaboración con profesionales de la educación especial y terapeutas del habla para garantizar una intervención integral.
+        </p> 
+       </li>
 
-        videos.forEach(video => {
-            video.style.display = 'none';
-        });
+       <li> <h3 id="subliteral710" style="display: inline">6.10. Fomenta la conciencia y la comprensión:</h3> 
+        <p style="display: inline"> Educa a compañeros de clase y familiares sobre la dislexia para fomentar la comprensión y el apoyo en todos los aspectos de la vida del estudiante.
+        </p> 
+       </li>
+    </ul>
+ <img id="img" src="https://kimberly-dislexia.github.io/PagDislexia/images/ayudardislexia.jpeg" alt="Ayudar a personas con dislexia" style="max-width: 50%; width: 400px ;height: auto; display: block;"> <p style="font-size: small; text-align: center;"> Imagen tomada de: Ceupe magazine (www.ceupe.com/blog/consejos-para-ayudar-a-ninos-con-dislexia.html) </p>
 
-        videos[videoActual - 1].style.display = 'block';
-    }
-
-    mostrarVideo(videoActual); // Mostrar el primer video al cargar la página
-</script>
-
-</body>
-</html>
 
 
 
