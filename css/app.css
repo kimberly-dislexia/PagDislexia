@@ -126,7 +126,7 @@ body {
 }
 
 .carrousel .grande {
-  width: 420%;
+  width: 400%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
