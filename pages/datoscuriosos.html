@@ -7,13 +7,12 @@
 
     <style>  
         
-        #circulo{
+        #circulo {
             position: relative;
             margin-left: 30%;
             box-sizing: box-shadow;
             height: 500px;
             width: 500px;
-            background-color: red;
             border-radius: 50%;
             box-sizing: border-box;
             border-width: 250px;
@@ -21,13 +20,32 @@
             border-color: purple orange blue green;
             transform: rotate(45deg);
             display: block;
-          }
-          
-          span{
+        }
+        
+        .seccion1 {
+            background-image: url('https://kimberly-dislexia.github.io/PagDislexia/images/escribiendo.jpg');
+        }
+        
+        .seccion2 {
+            background-image: url('https://kimberly-dislexia.github.io/PagDislexia/images/escribiendo.jpg');
+        }
+        
+        .seccion3 {
+            background-image: url('https://kimberly-dislexia.github.io/PagDislexia/images/escribiendo.jpg');
+        }
+        
+        .seccion4 {
+            background-image: url('https://kimberly-dislexia.github.io/PagDislexia/images/escribiendo.jpg');
+        }
+        
+        #circulo span {
             position: absolute;
             width: 175px;
             transform: rotate(-45deg);
-          }
+        }
+        
+          
+          
           
           #texto1{
              margin-left: -225px;
@@ -112,7 +130,7 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-size: larger;
             font-style: oblique;
-            padding: 0.5em;
+            padding: 0.20em;
 
                 /* Propiedades para la imagen de fondo */
             background-image: url('https://images.unsplash.com/photo-1581544291234-31340be4b1b8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
@@ -176,6 +194,12 @@
         #footer li a{
             text-align: right;
         }
+        #circulo span:hover {
+            transform: scale(1.4) rotate(-45deg);
+            transition: transform 0.3s ease-in-out; /* Añade una transición suave al cambio de escala */
+            color: black;
+        }
+        
 
 
     </style>
@@ -200,7 +224,7 @@
 
 
     <section id="inicio">
-       <h1>Datos curiosos sobre la dislexia</h1>
+       <h1 style="margin-top:1.5em;">Datos sobre la dislexia</h1>
     </section>
 
     <p style="margin: 1em;"> 
@@ -209,10 +233,10 @@
 
 
     <div id="circulo">
-        <span id="texto1">Prevalencia: La dislexia es un trastorno común del aprendizaje que afecta aproximadamente al 5-10% de la población mundial.</span>
-        <span id="texto2">Poseen un pensamiento en imágenes de 400 a 2000 veces superior a una persona con pensamiento tipo verbal.</span>
-        <span id="texto3">Muchas personas célebres, fueron disléxicos como por ejemplo Leonardo Da Vinci, Einstein, Walt Disney…como veis, ¡todos súper creativos!</span>
-        <span id="texto4">Estudios han demostrado que, si uno de los padres tienen dislexia, el niño tiene un 50% de posibilidades de heredarla.</span>
+        <span id="texto1" class="seccion1">Prevalencia: La dislexia es un trastorno común del aprendizaje que afecta aproximadamente al 5-10% de la población mundial.</span>
+        <span id="texto2" class="seccion2">Poseen un pensamiento en imágenes de 400 a 2000 veces superior a una persona con pensamiento tipo verbal.</span>
+        <span id="texto3" class="seccion3">Muchas personas célebres, fueron disléxicos como por ejemplo Leonardo Da Vinci, Einstein, Walt Disney…como veis, ¡todos súper creativos!</span>
+        <span id="texto4" class="seccion4">Estudios han demostrado que, si uno de los padres tienen dislexia, el niño tiene un 50% de posibilidades de heredarla.</span>
     </div>
 
     <div>
@@ -269,7 +293,7 @@
 
       </div>
       <div>
-        <img style="width: 30%;height:auto;margin-left:-0.4em" src="https://kimberly-dislexia.github.io/PagDislexia/images/curiosidad3.png" alt="curiosidad3">
+        <img style="width: 40%;height:auto;margin-left:25em" src="https://kimberly-dislexia.github.io/PagDislexia/images/curiosidad3.png" alt="curiosidad3">
       </div>
 
 
