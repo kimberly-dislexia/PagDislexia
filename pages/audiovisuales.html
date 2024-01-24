@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tests para diagnosticar la dislexia</title>
+    <title>Recursos Audiovisuales</title>
 
     <style>   
 
@@ -47,6 +47,9 @@
             border-radius: 1em;
             background-color: rgba(180, 163, 163, 0.5);
             overflow: hidden;
+            display: block;
+            margin-left: 5em;
+            margin-right: 5em;
           }
           
           .carrousel .grande {
@@ -98,6 +101,72 @@
           .carrousel .punto.activo {
             background-color: rgb(12, 241, 50);
           }
+
+
+          .carrousel1 {
+            margin-top: 0%;
+            width: 38%;
+            max-width: 120em;
+            padding: 1em;
+            color: var(--negro);
+            transition: all 0.4s ease;
+            border-radius: 1em;
+            background-color: rgba(180, 163, 163, 0.5);
+            overflow: hidden;
+            display: block;
+            
+          }
+          
+          .carrousel1 .grande1 {
+            width: 400%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--negro);
+            transition: all 0.4s ease;
+            border-radius: 1em;
+            background-color: rgba(180, 163, 163, 0.692);
+            padding: 1em;
+            transition: all 0.5s ease;
+            transform: translateX(0%);
+          }
+          
+          .carrousel1 .img1 {
+            max-width: 100%;
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center center;
+            border-radius: 1em;
+            
+          }
+          
+          .carrousel1 .puntos1 {
+            width: 100%;
+            margin: 1em 0 0;
+            padding: 0.4em;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          .carrousel1 .punto1 {
+            width: 2em;
+            height: 2em;
+            margin: 1em 1em 1em;
+            color: var(--negro);
+            transition: all 0.4s ease;
+            border-radius: 1em;
+            background-color: white;
+            
+          }
+          
+          .carrousel1 .punto1.activo1 {
+            background-color: rgb(12, 241, 50);
+          }
+          
           
           .navbar {
             background-color: white;
@@ -155,8 +224,11 @@
         
     </div>
     
-    <div style="display: block;  position:absolute; z-index: 2; margin-top:-30em;color:brown; width:38%; padding:2%;">
+    <div style="display: block;  position:absolute; z-index: 2; margin-top:-30em;color:brown; width:38%; padding:2%; margin-left:-33em">
         <h1 style="font-size:x-large; background-color: rgb(252, 158, 231); text-align: center;">Galería de videos</h1>
+    </div>
+    <div style="display: block;  position:absolute; z-index: 2; margin-top:-30em;color:brown; width:38%; padding:2%; margin-left:43em">
+        <h1 style="font-size:x-large; background-color: rgb(252, 158, 231); text-align: center;">Galería de imágenes</h1>
     </div>
 
     <div class="carrousel">
@@ -184,6 +256,24 @@
             <li class="punto"></li>
             <li class="punto"></li>
             <li class="punto"></li>
+        </ul>
+    </div>
+
+
+    <div class="carrousel1">
+        <div class="grande1">
+            <img style="width:23.5%; height:250px; margin-left: 0.25em; margin-right:1em;" class="img1" src="https://kimberly-dislexia.github.io/PagDislexia/images/escribiendo.jpg" alt="deco-comprension">
+            <img style="width:23.5%; height:250px; margin-left: 0.85em; margin-right:1em;" class="img1" src="https://kimberly-dislexia.github.io/PagDislexia/images/escribiendo.jpg" alt="deco-comprension">
+            <img style="width:23.5%; height:250px; margin-left: 0.85em; margin-right:1em;" class="img1" src="https://kimberly-dislexia.github.io/PagDislexia/images/escribiendo.jpg" alt="deco-comprension">
+            <img style="width:23.5%; height:250px; margin-left: 0.5em; margin-right:0em;" class="img1" src="https://kimberly-dislexia.github.io/PagDislexia/images/escribiendo.jpg" alt="deco-comprension">
+            
+        </div>
+
+        <ul style="list-style-type: none;" class="puntos1">
+            <li class="punto1 activo1"></li>
+            <li class="punto1"></li>
+            <li class="punto1"></li>
+            <li class="punto1"></li>
         </ul>
     </div>
 
@@ -223,22 +313,42 @@
         })
     })
 
-    ( condicion ) ? 'hola' : 'adiós'
+    
 
-        // Añade la clase al hacer scroll
-        window.onscroll = function() { scrollFunction() };
+        
 
-        function scrollFunction() {
-            const navbar = document.getElementById("navbar");
+    const grande1    = document.querySelector('.grande1')
+    const punto1     = document.querySelectorAll('.punto1')
 
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                navbar.style.backgroundColor = "#ffffff70"; // Cambia el color al hacer scroll hacia abajo
-                document.body.classList.add("with-navbar");
-            } else {
-                navbar.style.backgroundColor = "white"; // Restaura el color inicial
-                document.body.classList.remove("with-navbar");
-            }
-        }
+    // Cuando CLICK en punto
+        // Saber la posición de ese punto
+        // Aplicar un transform translateX al grande
+        // QUITAR la clase activo de TODOS puntos
+        // AÑADIR la clase activo al punto que hemos hecho CLICK
+
+    // Recorrer TODOS los punto
+    punto1.forEach( ( cadaPunto1 , i )=> {
+        // Asignamos un CLICK a cadaPunto
+        punto1[i].addEventListener('click',()=>{
+
+            // Guardar la posición de ese PUNTO
+            let posicion1  = i
+            // Calculando el espacio que debe DESPLAZARSE el GRANDE
+            let operacion1 = posicion1 * -25.2
+
+            // MOVEMOS el grand
+            grande1.style.transform = `translateX(${ operacion1 }%)`
+
+            // Recorremos TODOS los punto
+            punto1.forEach( ( cadaPunto1 , i )=>{
+                // Quitamos la clase ACTIVO a TODOS los punto
+                punto1[i].classList.remove('activo1')
+            })
+            // Añadir la clase activo en el punto que hemos hecho CLICK
+            punto1[i].classList.add('activo1')
+
+        })
+    })
     </script>
 </body>
 </html>
