@@ -1,135 +1,232 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recursos Audiovisuales</title>
-    <style>
-        .carrusel{
-            width: 90%;
-            max-width: 120em;
-            background-color: lightskyblue;
-            padding: 2em;
-        }
-        .carrusel .grande{
-            width: 400%;
-            background-color: orange;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2em;
-            transition: all .5s ease;
-            transform: translateX(0%);
-        }
-        .carrusel .video{
-            width: calc(100% / 4);
-            background-color: lime;
-        }
-        .carrusel .puntos{
-            width: 100%;
-            background-color: red;
-            margin: 1em 0 0;
-            padding: .4em;
-            
+    <title>Tests para diagnosticar la dislexia</title>
+
+    <style>   
+
+        body {
+            font-family: var(--tipo-principal);
+            font-size: 100%;
+            line-height: 1.4em;
+            min-height: 100vh;
+            background-color: #96f3e7ad;
+            color: var(--negro);
+            -webkit-hyphens: auto;
+                    hyphens: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
             align-items: center;
-        }
-        .carrusel .punto{
+          }
+          
+          .carrousel {
+            margin-top: 0%;
+            width: 38%;
+            max-width: 120em;
+            padding: 1em;
+            color: var(--negro);
+            transition: all 0.4s ease;
+            border-radius: 1em;
+            background-color: rgba(180, 163, 163, 0.5);
+            overflow: hidden;
+          }
+          
+          .carrousel .grande {
+            width: 400%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--negro);
+            transition: all 0.4s ease;
+            border-radius: 1em;
+            background-color: white;
+            padding: 1em;
+            transition: all 0.5s ease;
+            transform: translateX(0%);
+          }
+          
+          .carrousel .img {
+            width: calc( 100% / 4 - 1em);
+            min-height: 10vh;
+            color: var(--negro);
+            transition: all 0.4s ease;
+            border-radius: 1em;
+            background-color: white;
+            
+          }
+          
+          .carrousel .puntos {
+            width: 100%;
+            margin: 1em 0 0;
+            padding: 0.4em;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          .carrousel .punto {
             width: 2em;
             height: 2em;
-            margin: 1em 1em 0;
-            background-color: blue;
+            margin: 1em 1em 1em;
+            color: var(--negro);
+            transition: all 0.4s ease;
+            border-radius: 1em;
+            background-color: white;
+            
+          }
+          
+          .carrousel .punto.activo {
+            background-color: rgb(12, 241, 50);
+          }
+          
+          .navbar {
+            background-color: white;
+            color: #000000;
+            padding: 0.5em;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Agrega una transición suave al cambio de color de fondo */
+             /* Añade posición fija y fija la barra en la parte superior */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Asegura que la barra esté en la parte superior de otros elementos */
         }
-
-        .carrusel .punto.activo{
-            background-color: orange;
-        }
-
+          
+          
+          /* Barra de navegación transparente cuando no está en la parte superior */
+          body.with-navbar {
+            margin-top: 80px;
+          }
+          
+          
+          /* Añade margen superior al contenido para evitar que se superponga con la barra de navegación */
+          section {
+            background-color: #ffffff;
+            padding-top: 0px; /* Ajusta según el tamaño de tu barra de navegación */
+          }
+          
+          
+          .navbar ul a {
+            color: #080808;
+            text-decoration: none;
+            padding: 0.5em;
+            margin-top: 0%;
+            margin-bottom: 0%;
+            border: 1px solid black;
+          }
 
     </style>
+
 </head>
+
 <body>
-    <div class="carrusel">
-        <div class="grande">
-            <video> <source src="https://kimberly-dislexia.github.io/PagDislexia/videos/Dislexia_360.mp4" type="video/mp4"> </video>
-            <video> <source src="https://kimberly-dislexia.github.io/PagDislexia/videos/Dislexia_360.mp4" type="video/mp4"> </video>
-            <video> <source src="https://kimberly-dislexia.github.io/PagDislexia/videos/Dislexia_360.mp4" type="video/mp4"> </video>
-            <video> <source src="https://kimberly-dislexia.github.io/PagDislexia/videos/Dislexia_360.mp4" type="video/mp4"> </video>
-        </div>
+
+    <div class="navbar" id="navbar">
+        <a style="display:inline; position:absolute; z-index: 2;" href="https://kimberly-dislexia.github.io/PagDislexia/">
+            <img style="height: 30%; width:35%" src="https://kimberly-dislexia.github.io/PagDislexia/images/utn_letras.png" alt="Inicio">
+        </a>
+        <ul style="margin-top:0.25%; margin-bottom:0.25%; margin-right:1% ;text-align:right">
+        <a href="https://kimberly-dislexia.github.io/PagDislexia/">Inicio</a> 
+        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/recursos">Teoría</a> 
+        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/juegos">Juegos</a>
+        <a href="https://kimberly-dislexia.github.io/PagDislexia/audiovisual">Recursos audiovisuales</a>
+        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/test">Hojas descargables</a>
+        <a href="https://kimberly-dislexia.github.io/PagDislexia/pages/datoscuriosos">¿Sabías qué?</a>
+        </ul>
         
+    </div>
+    
+    <div style="display: block;  position:absolute; z-index: 2; margin-top:-30em; color:brown; width:38%; padding:2%;">
+        <h1 style="font-size:x-large; background-color: rgb(252, 158, 231); text-align: center;">Galería de videos</h1>
+    </div>
+
+    <div class="carrousel">
+        <div class="grande">
+            <video width="24%" height="250px" controls style="margin-left: -0.5%; margin-right:2em;">
+                <source src="https://kimberly-dislexia.github.io/PagDislexia/videos/Dislexia_360.mp4" type="video/mp4">
+                Tu navegador no soporta el tag de video.
+            </video>
+            <video width="24%" height="250px" controls style="margin-left: -0.5%; margin-right:2em;">
+                <source src="https://kimberly-dislexia.github.io/PagDislexia/videos/Discriminacion_auditiva.mp4" type="video/mp4">
+                Tu navegador no soporta el tag de video.
+            </video>
+            <video width="24%" height="250px" controls style="margin-left: 0%; margin-right:2.5em;">
+                <source src="https://kimberly-dislexia.github.io/PagDislexia/videos/Lectura_interactiva.mp4" type="video/mp4">
+                Tu navegador no soporta el tag de video.
+            </video>
+            <video width="24%" height="250px" controls style="margin-left: -0.30%; margin-right: 0;">
+                <source src="https://kimberly-dislexia.github.io/PagDislexia/videos/Son_iguales1.mp4" type="video/mp4">
+                Tu navegador no soporta el tag de video.
+            </video>
+        </div>
+
         <ul class="puntos">
+            <li class="punto activo"></li>
+            <li class="punto"></li>
             <li class="punto"></li>
             <li class="punto"></li>
         </ul>
-
-    </div>
-</body>
-</html> -->
-
-
-<!DOCTYPE html>
-<html lang="es">
-    
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrusel de Videos con Swiper.js</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-
-        .swiper-container {
-            width: 30%;
-            margin: 20px auto;
-        }
-
-        .swiper-slide {
-            background-color: #fff;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <video controls>
-                <source src="video1.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
-        </div>
-        <!-- Agrega más videos según sea necesario -->
     </div>
 
-    <!-- Puntos de navegación -->
-    <div class="swiper-pagination"></div>
-</div>
+    <script>
+        'use strict'
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-    });
-</script>
-<!-- Al final del cuerpo del HTML, antes de cerrar la etiqueta </body> -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    const grande    = document.querySelector('.grande')
+    const punto     = document.querySelectorAll('.punto')
 
+    // Cuando CLICK en punto
+        // Saber la posición de ese punto
+        // Aplicar un transform translateX al grande
+        // QUITAR la clase activo de TODOS puntos
+        // AÑADIR la clase activo al punto que hemos hecho CLICK
+
+    // Recorrer TODOS los punto
+    punto.forEach( ( cadaPunto , i )=> {
+        // Asignamos un CLICK a cadaPunto
+        punto[i].addEventListener('click',()=>{
+
+            // Guardar la posición de ese PUNTO
+            let posicion  = i
+            // Calculando el espacio que debe DESPLAZARSE el GRANDE
+            let operacion = posicion * -25
+
+            // MOVEMOS el grand
+            grande.style.transform = `translateX(${ operacion }%)`
+
+            // Recorremos TODOS los punto
+            punto.forEach( ( cadaPunto , i )=>{
+                // Quitamos la clase ACTIVO a TODOS los punto
+                punto[i].classList.remove('activo')
+            })
+            // Añadir la clase activo en el punto que hemos hecho CLICK
+            punto[i].classList.add('activo')
+
+        })
+    })
+
+    ( condicion ) ? 'hola' : 'adiós'
+
+        // Añade la clase al hacer scroll
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            const navbar = document.getElementById("navbar");
+
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                navbar.style.backgroundColor = "#ffffff70"; // Cambia el color al hacer scroll hacia abajo
+                document.body.classList.add("with-navbar");
+            } else {
+                navbar.style.backgroundColor = "white"; // Restaura el color inicial
+                document.body.classList.remove("with-navbar");
+            }
+        }
+    </script>
 </body>
 </html>
 
