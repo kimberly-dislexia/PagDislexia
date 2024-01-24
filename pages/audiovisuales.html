@@ -227,6 +227,32 @@
             text-align: right;
         }
 
+        .img-expandida {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 90%;
+          min-height: 90%;
+          z-index: 1000;
+          background-color: rgba(169, 169, 169, 0.8); /* Gris medio transparente */
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          
+      }
+
+      .cerrar {
+          position: absolute;
+          top: 0.5em;
+          right: 1.5em;
+          font-size: 3em;
+          color: black; /* Color negro */
+          cursor: pointer;
+          z-index: 1001;
+          background-color:  rgba(169, 169, 169, 0.8);;
+      }
+
     </style>
 
 </head>
@@ -285,21 +311,20 @@
 
 
     <div class="carrousel1">
-        <div class="grande1">
-            <img style="width:23.5%; height:250px; margin-left: 0.25em; margin-right:1em;" class="img1" src="https://kimberly-dislexia.github.io/PagDislexia/images/escribiendo.jpg" alt="deco-comprension">
-            <img style="width:23.5%; height:250px; margin-left: 0.85em; margin-right:1em;" class="img1" src="https://kimberly-dislexia.github.io/PagDislexia/images/escribiendo.jpg" alt="deco-comprension">
-            <img style="width:23.5%; height:250px; margin-left: 0.85em; margin-right:1em;" class="img1" src="https://kimberly-dislexia.github.io/PagDislexia/images/escribiendo.jpg" alt="deco-comprension">
-            <img style="width:23.5%; height:250px; margin-left: 0.5em; margin-right:0em;" class="img1" src="https://kimberly-dislexia.github.io/PagDislexia/images/escribiendo.jpg" alt="deco-comprension">
-            
-        </div>
+      <div class="grande1">
+          <img style="width:23.5%; height:250px; margin-left: 0.25em; margin-right:1em;" class="img1" src="https://kimberly-dislexia.github.io/PagDislexia/images/vis1.jpg" alt="imgvis1" onclick="expandirImagen(this)">
+          <img style="width:23.5%; height:250px; margin-left: 0.85em; margin-right:1em;" class="img1" src="https://kimberly-dislexia.github.io/PagDislexia/images/vis2.jpg" alt="imgvis2" onclick="expandirImagen(this)">
+          <img style="width:23.5%; height:250px; margin-left: 0.85em; margin-right:1em;" class="img1" src="https://kimberly-dislexia.github.io/PagDislexia/images/vis3.jpg" alt="imgvis3" onclick="expandirImagen(this)">
+          <img style="width:23.5%; height:250px; margin-left: 0.5em; margin-right:0em;" class="img1" src="https://kimberly-dislexia.github.io/PagDislexia/images/vis4.jpg" alt="imgvis4" onclick="expandirImagen(this)">
+      </div>
 
-        <ul style="list-style-type: none;" class="puntos1">
-            <li class="punto1 activo1"></li>
-            <li class="punto1"></li>
-            <li class="punto1"></li>
-            <li class="punto1"></li>
-        </ul>
-    </div>
+      <ul style="list-style-type: none;" class="puntos1">
+          <li class="punto1 activo1"></li>
+          <li class="punto1"></li>
+          <li class="punto1"></li>
+          <li class="punto1"></li>
+      </ul>
+  </div>
 
     <section id="footer">
         <p>&copy; 2023 Página para Estudiantes con Dislexia diseñada por Kimberly Alba.</p>
@@ -379,6 +404,41 @@
 
         })
     })
+
+
+
+
+    'use strict'
+
+        // Función para expandir la imagen
+        function expandirImagen(imagen) {
+            // Crear contenedor para la imagen expandida
+            const contenedorExpandido = document.createElement('div');
+            contenedorExpandido.className = 'img-expandida';
+
+            // Crear imagen dentro del nuevo contenedor
+            const imgExpandida = new Image();
+            imgExpandida.src = imagen.src;
+            imgExpandida.alt = imagen.alt;
+            imgExpandida.height = 600;
+            imgExpandida.width = 1220;
+
+            // Crear botón de cierre
+            const cerrar = document.createElement('div');
+            cerrar.innerHTML = '&times;';
+            cerrar.className = 'cerrar';
+            cerrar.onclick = function () {
+                // Eliminar contenedor y botón de cierre
+                document.body.removeChild(contenedorExpandido);
+                document.body.removeChild(cerrar);
+            };
+
+            // Agregar imagen y botón de cierre al contenedor
+            contenedorExpandido.appendChild(imgExpandida);
+            document.body.appendChild(contenedorExpandido);
+            document.body.appendChild(cerrar);
+        }
+
     </script>
 </body>
 </html>
