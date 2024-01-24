@@ -5,11 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos Curiosos</title>
 
-    <style>   
+    <style>  
+        
+        #circulo{
+            position: relative;
+            margin-left: 30%;
+            box-sizing: box-shadow;
+            height: 500px;
+            width: 500px;
+            background-color: red;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border-width: 250px;
+            border-style: solid;
+            border-color: purple orange blue green;
+            transform: rotate(45deg);
+            display: block;
+          }
+          
+          span{
+            position: absolute;
+            width: 175px;
+            transform: rotate(-45deg);
+          }
+          
+          #texto1{
+             margin-left: -225px;
+             margin-top: -4em;
+             font-weight: bold;
+             color: white;
+          }
+          
+          #texto2{
+            margin-left: -5em;
+             margin-top: -13.5em;
+             font-weight: bold;
+             color: white;
+          }
+          
+          #texto3{
+            font-weight: bold;
+            color: white;
+            left: -100px;
+            top: 50px;
+          }
+          
+          #texto4{
+            font-weight: bold;
+            color: white;
+            top: -80px;
+            left: 40px;
+          }
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #0dcce1;
+            background-color: #c8f5fad2;
             color: #333;
             margin: 0;
             padding: 0;
@@ -75,6 +125,35 @@
             padding-top: 1%;
         }
 
+        #tabla-container {
+            margin-left: 4em;
+            max-width: 90%;
+            width: 90%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse:collapse;
+            margin-top: 20px; /* Espacio superior */
+            font-size: medium;
+        }
+
+        th {
+            border: 1px solid black;
+            padding: 1%;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 1%;
+            text-align: justify;
+        } 
+
+        th {
+            background-color: #3331312c;
+        }
+
     
 
         #footer {
@@ -127,6 +206,70 @@
     <p style="margin: 1em;"> 
         La dislexia, un trastorno del aprendizaje que afecta a un porcentaje significativo de la población, va más allá de las simples dificultades en la lectura. En este conjunto de datos curiosos, exploraremos aspectos fascinantes sobre la dislexia:
     </p>
+
+
+    <div id="circulo">
+        <span id="texto1">Prevalencia: La dislexia es un trastorno común del aprendizaje que afecta aproximadamente al 5-10% de la población mundial.</span>
+        <span id="texto2">Creatividad: Algunas investigaciones sugieren que las personas con dislexia pueden tener habilidades creativas y de pensamiento lateral más fuertes.</span>
+        <span id="texto3">Dificultades en el Ritmo: A menudo, las personas con dislexia tienen dificultades para reconocer patrones de ritmo, lo que puede afectar la lectura en voz alta.</span>
+        <span id="texto4">Inteligencia: Las personas con dislexia pueden tener inteligencia normal o incluso superior. La dislexia no está relacionada con la capacidad intelectual.</span>
+    </div>
+
+    <div>
+        <p style="margin: 1em;text-align:center">Acá tienes otros datos sobre la dislexia:</p>
+        <img style="width: 30%;height:auto;margin: right 0;margin-left:18em" src="https://kimberly-dislexia.github.io/PagDislexia/images/curiosidad1.png" alt="curiosidad1">
+        <img style="width: 30%;height:auto;margin-left:-0.4em" src="https://kimberly-dislexia.github.io/PagDislexia/images/curiosidad2.png" alt="curiosidad2">
+
+    </div>
+    
+    
+      <div>
+        <p style="margin: 1em;text-align:center"> ¿Quieres saber la diferencia entre la dislexia y otros problemas de aprendizaje? Aquí también te lo explicamos:</p>
+        <div id="tabla-container"> 
+            <table border="1">
+                <!-- Encabezado de la tabla -->
+               <tr>
+                   <th>Trastorno</th>
+                   <th>Definición</th>
+                   <th>Características</th>
+               </tr>
+               <!-- Fila 1 -->
+               <tr>
+                   <td>Dislexia</td>
+                   <td>Es un trastorno del aprendizaje que afecta principalmente la habilidad de una persona para leer con precisión y fluidez. </td>
+                   <td>Dificultades en la decodificación de palabras, problemas para reconocer palabras comunes y lentitud en la lectura. No está relacionada con la inteligencia.</td>
+               </tr>
+               <!-- Fila 2 -->
+               <tr>
+                   <td>Discalculia</td>
+                   <td>Es un trastorno de la escritura que afecta la habilidad de una persona para expresarse por escrito.</td>
+                   <td>Dificultades en la coordinación motora fina, problemas con la gramática y la ortografía, y una escritura generalmente menos legible.</td>
+               </tr>
+               <!-- Fila 3 -->
+               <tr>
+                   <td>Disgrafía</td>
+                   <td>Es un trastorno de la escritura que afecta la habilidad de una persona para expresarse por escrito.</td>
+                   <td>Dificultades en la coordinación motora fina, problemas con la gramática y la ortografía, y una escritura generalmente menos legible.</td>
+               </tr>
+               <!-- Fila 4 -->
+               <tr>
+                   <td>Disortografía</td>
+                   <td>Es un trastorno específico de la escritura que se centra en dificultades específicas con la ortografía.</td>
+                   <td>Dificultades para deletrear palabras correctamente, confusión de letras y sílabas, y errores ortográficos persistentes.</td>
+               </tr>
+               <!-- Fila 5 -->
+               <tr>
+                   <td>Parafasia </td>
+                   <td>Es un trastorno de la comunicación en el cual se producen errores en la producción del habla, generalmente involucrando la sustitución, omisión o inversión de sonidos, sílabas o palabras.</td>
+                   <td>Dificultad para mantener una fluidez normal en la expresión oral, la sustitución de una palabra por otra ("televisor" por "teléfono"), la inversión de sonidos dentro de una palabra, la omisión de sonidos o sílabas, agregación de sonidos dentro de una palabra, neologismos, confusión sistemática donde usa de palabras incorrectas que tienen significados similares pero no son apropiadas en el contexto.</td>
+               </tr>
+           </table>
+        </div>
+        <p style="font-size: small; text-align: center;">Fuente: Propia </p>
+
+      </div>
+
+
 
      <section id="footer">
         <p>&copy; 2023 Página para Estudiantes con Dislexia diseñada por Kimberly Alba.</p>
